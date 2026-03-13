@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_11-31-45",
+            "content": "@@ -360,10 +360,8 @@\n h %25s\n-%5Cn\n %22, n\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-13_11-31-53",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var name string \n    var age int\n    fmt.Scan(&name, &age)\n\n    var r string\n    if age < 12 {\n        r = \"crianca\"\n    } else if age < 18 {\n        r = \"jovem\"\n    } else if age < 65 {\n        r = \"adulto\"\n    } else if age < 1000 {\n        r = \"idoso\"\n    } else {\n        r = \"mumia\"\n    }\n\n    fmt.Printf(\"%s eh %s\\n\", name, r)\n}\n",
+            "lines": "22"
+        }
+    ]
+}
