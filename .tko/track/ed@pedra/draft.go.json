@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_14-06-51",
+            "content": "@@ -70,60 +70,26 @@\n     \n-fmt.Scanf(%22%25d%22, &qt)%0A    launches := make(%5B%5Dint, qt)\n+var launches %5B%5Dint\n %0A   \n@@ -335,288 +335,22 @@\n     \n-vwin := 101%0A    iwin := 101%0A    for i := 0; i %3C qt; i++ %7B%0A        if launches%5Bi%5D != -1 && launches%5Bi%5D %3C vwin %7B%0A            vwin = launches%5Bi%5D%0A            iwin = i%0A        %7D%0A    %7D%0A%0A    if iwin != 101 %7B%0A        fmt.Println(iwin)%0A    %7D else %7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D\n+print(launches)\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-14_14-14-15",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\nfunc main() {\n    var qt int\n    fmt.Scanf(\"%d\", &qt)\n    launches := make([]int, qt)\n    for i := 0; i < qt; i++ {\n        var l1, l2 int\n        fmt.Scanf(\"%d %d\", &l1, &l2)\n\n        if l1 < 10 || l2 < 10 {\n            launches[i] = -1\n        } else {\n            launches[i] = int(math.Abs(float64(l1-l2)))\n        }\n    }\n\n    vwin := 101\n    iwin := 101\n    for i := 0; i < qt; i++ {\n        if launches[i] != -1 && launches[i] < vwin {\n            vwin = launches[i]\n            iwin = i\n        }\n    }\n\n    if iwin != 101 {\n        fmt.Println(iwin)\n    } else {\n        fmt.Println(\"sem ganhador\")\n    }\n}\n",
+            "lines": "36"
+        }
+    ]
+}
