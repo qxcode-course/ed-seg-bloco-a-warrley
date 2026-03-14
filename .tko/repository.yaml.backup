@@ -14,13 +14,15 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@student_sandbox_alias:00_rascunhos
 - ed@main-quest
+- sandbox@student_sandbox_alias:00_rascunhos
 - ed@revisão
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
   ed@fuga: '{self:1, rate:100}'
+  ed@pedra: '{self:1, rate:100}'
+  ed@casais: '{self:1, rate:100}'
 flags:
   painel: 0
   quests: 0
@@ -29,4 +31,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pedra
+selected: ed@baruel

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_14-21-27",
+            "content": "@@ -67,97 +67,8 @@\n (&n)\n-%0A    vet := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i ++ %7B%0A        fmt.Scan(&vet%5Bi%5D)%0A    %7D \n %0A%0A  \n@@ -82,14 +82,10 @@\n rint\n-ln(vet\n+(n\n )%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-14_14-23-38",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -47,17 +47,20 @@\n r n int%0A\n-%09\n+    \n fmt.Scan\n@@ -64,17 +64,20 @@\n can(&n)%0A\n-%09\n+    \n vet := m\n@@ -94,74 +94,12 @@\n  n)%0A\n-%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&vet%5Bi%5D)%0A%09%7D%0A%0A%09var count int%0A%09\n+    \n for \n@@ -118,349 +118,67 @@\n n; i\n+ \n ++ %7B%0A\n-%09%09for j := i + 1; j %3C n; j++ %7B%0A%09%09%09// fmt.Println(vet)%0A%09%09%09if vet%5Bi%5D != 0 && vet%5Bi%5D+vet%5Bj%5D == 0 %7B%0A%09%09%09%09// fmt.Printf(%22%25d-%25d%5Cn%22, vet%5Bi%5D, vet%5Bj%5D)%0A%09%09%09%09count++%0A%09%09%09%09vet%5Bi%5D = 0%0A%09%09%09%09vet%5Bj%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Printf(%22%25d%5Cn%22, count)%0A%0A%7D%0A%0A// func abs(x int) int%7B%0A//     if x %3C 0 %7B%0A//         return -x%0A//     %7D else %7B%0A//         return x%0A//     %7D%0A// \n+        fmt.Scan(&vet%5Bi%5D)%0A    %7D %0A%0A    fmt.Println(vet)%0A\n %7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-14_14-36-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tvet := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&vet[i])\n\t}\n\n\tvar count int\n\tfor i := 0; i < n; i++ {\n\t\tfor j := i + 1; j < n; j++ {\n\t\t\t// fmt.Println(vet)\n\t\t\tif vet[i] != 0 && vet[i]+vet[j] == 0 {\n\t\t\t\t// fmt.Printf(\"%d-%d\\n\", vet[i], vet[j])\n\t\t\t\tcount++\n\t\t\t\tvet[i] = 0\n\t\t\t\tvet[j] = 0\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Printf(\"%d\\n\", count)\n\n}\n\n// func abs(x int) int{\n//     if x < 0 {\n//         return -x\n//     } else {\n//         return x\n//     }\n// }\n",
+            "lines": "36"
+        }
+    ]
+}
