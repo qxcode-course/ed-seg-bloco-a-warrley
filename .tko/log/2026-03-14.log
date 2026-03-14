@@ -1,0 +1,14 @@
+2026-03-14 13:21:43, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-14 13:23:06, EXEC, v:1, k:ed@fuga, mode:FREE, size:10
+2026-03-14 13:26:44, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:20
+2026-03-14 13:27:06, EXEC, v:1, k:ed@fuga, mode:FULL, rate:60, size:20
+2026-03-14 13:32:07, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-14 13:32:07, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-14 13:32:08, EXEC, v:1, k:ed@fuga, mode:FULL, rate:60, size:26
+2026-03-14 13:34:14, EXEC, v:1, k:ed@fuga, mode:FULL, rate:40, size:26
+2026-03-14 13:34:19, EXEC, v:1, k:ed@fuga, mode:FULL, rate:60, size:26
+2026-03-14 13:36:56, EXEC, v:1, k:ed@fuga, mode:LOCK, rate:0, size:26
+2026-03-14 13:44:15, EXEC, v:1, k:ed@fuga, mode:LOCK, rate:0, size:31
+2026-03-14 13:44:27, EXEC, v:1, k:ed@fuga, mode:LOCK, rate:100, size:31
+2026-03-14 13:44:30, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-14 13:44:34, MOVE, v:1, k:ed@fuga, mode:BACK

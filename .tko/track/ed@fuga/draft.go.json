@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_13-23-06",
+            "content": "@@ -102,143 +102,8 @@\n d)%0A%0A\n-    dp := (f-p) %25 16%0A    df := (f-h) %25 16%0A    var res string%0A%0A    if dp %3C df %7B%0A        res = %22N%22%0A    %7D else %7B%0A        res = %22S%22%0A    %7D%0A%0A\n %09fmt\n@@ -113,11 +113,18 @@\n int(\n-res\n+h, p, f, d\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-14_13-26-44",
+            "content": "@@ -102,17 +102,20 @@\n d)%0A%0A\n-%09\n+    \n dp := (f\n  - p\n@@ -114,19 +114,17 @@\n = (f\n- - \n+-\n p) %25 16%0A\n %09df \n@@ -123,17 +123,20 @@\n  16%0A\n-%09\n+    \n df := (f\n  - h\n@@ -135,19 +135,17 @@\n = (f\n- - \n+-\n h) %25 16%0A\n %09var\n@@ -140,17 +140,20 @@\n h) %25 16%0A\n-%09\n+    \n var res \n@@ -160,17 +160,20 @@\n string%0A%0A\n-%09\n+    \n if dp %3C \n@@ -177,18 +177,24 @@\n  %3C df %7B%0A\n-%09%09\n+        \n res = %22N\n@@ -195,17 +195,20 @@\n s = %22N%22%0A\n-%09\n+    \n %7D else %7B\n@@ -212,10 +212,16 @@\n e %7B%0A\n-%09%09\n+        \n res \n@@ -226,17 +226,20 @@\n s = %22S%22%0A\n-%09\n+    \n %7D%0A%0A%09fmt.\n@@ -247,18 +247,9 @@\n rint\n-f(%22%25s%5Cn%22, \n+(\n res)\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_13-27-06",
+            "content": "@@ -102,152 +102,47 @@\n d)%0A%0A\n-    var dp, dh int%0A    if d == -1 %7B%0A        dh = (f - h) %25 16%0A        dp = (f - p) %25 16%0A%09%7D else %7B%0A%09%09dh = (h - f) %25 16%0A%09%09dp = (p - f\n+%09dp := (f - p) %25 16%0A%09df := (f - h\n ) %25 16\n-%09%0A    %7D\n %0A%09va\n@@ -165,17 +165,17 @@\n f dp %3C d\n-h\n+f\n  %7B%0A%09%09res\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_13-32-08",
+            "content": "@@ -129,16 +129,17 @@\n if d == \n+-\n 1 %7B%0A    \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_13-34-14",
+            "content": "@@ -129,17 +129,16 @@\n if d == \n--\n 1 %7B%0A    \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_13-34-19",
+            "content": "@@ -331,33 +331,16 @@\n (%22%25s\n-, %25d, %25d %5Cn%22, res, dp, dh\n+%5Cn%22, res\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_13-36-56",
+            "content": "@@ -25,56 +25,8 @@\n t%22%0A%0A\n-func mod16 (x int) int %7B%0A%09return (x+16) %25 16%0A%7D%0A%0A\n func\n@@ -98,17 +98,20 @@\n f, &d)%0A%0A\n-%09\n+    \n var dp, \n@@ -117,17 +117,20 @@\n  dh int%0A\n-%09\n+    \n if d == \n@@ -138,43 +138,59 @@\n 1 %7B%0A\n-%09%09dh = mod16(f-h)%0A%09%09dp = mod16(f-p)\n+        dh = (f - h) %25 16%0A        dp = (f - p) %25 16\n %0A%09%7D \n@@ -207,28 +207,28 @@\n h = \n-mod16\n (h - f)\n+ %25 16\n %0A%09%09dp = \n mod1\n@@ -227,23 +227,26 @@\n p = \n-mod16\n (p - f)\n-%0A%0A%09\n+ %25 16%09%0A    \n %7D%0A%09v\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_13-44-15",
+            "content": "@@ -354,16 +354,33 @@\n (%22%25s\n-%5Cn%22, res\n+, %25d, %25d %5Cn%22, res, dp, dh\n )%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-14_13-44-27",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc mod16 (x int) int {\n\treturn (x+16) % 16\n}\n\nfunc main() {\n\tvar h, p, f, d int\n\tfmt.Scanf(\"%d %d %d %d\", &h, &p, &f, &d)\n\n\tvar dp, dh int\n\tif d == -1 {\n\t\tdh = mod16(f-h)\n\t\tdp = mod16(f-p)\n\t} else {\n\t\tdh = mod16(h - f)\n\t\tdp = mod16(p - f)\n\n\t}\n\tvar res string\n\n\tif dp < dh {\n\t\tres = \"N\"\n\t} else {\n\t\tres = \"S\"\n\t}\n\n\tfmt.Printf(\"%s\\n\", res)\n}\n",
+            "lines": "31"
+        }
+    ]
+}

@@ -11,3 +11,5 @@
 2026-03-13 11:31:54, MOVE, v:1, k:ed@mumia, mode:BACK
 2026-03-13 11:32:25, SELF, v:1, k:ed@mumia, self:1, rate:100
 2026-03-13 11:32:50, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-13 11:33:36, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-13 11:33:38, MOVE, v:1, k:ed@fuga, mode:PICK
