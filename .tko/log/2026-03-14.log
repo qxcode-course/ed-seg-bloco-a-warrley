@@ -30,3 +30,16 @@
 2026-03-14 14:36:22, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:36
 2026-03-14 14:36:24, MOVE, v:1, k:ed@casais, mode:BACK
 2026-03-14 14:36:28, SELF, v:1, k:ed@casais, self:1, rate:100
+2026-03-14 14:37:31, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-14 14:37:33, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-14 14:57:12, EXEC, v:1, k:ed@baruel, mode:FREE, size:26
+2026-03-14 14:57:54, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-14 14:57:54, EXEC, v:1, k:ed@baruel, mode:FREE, size:26
+2026-03-14 15:08:48, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:30
+2026-03-14 15:09:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:32
+2026-03-14 15:09:36, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:32
+2026-03-14 15:25:05, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:34
+2026-03-14 15:29:41, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-14 15:34:47, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:46
+2026-03-14 15:34:49, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-14 15:35:22, SELF, v:1, k:ed@baruel, self:1, rate:100, concept:1

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_14-57-12",
+            "content": "@@ -133,11 +133,8 @@\n l)%0A%09\n-// \n albu\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_14-57-54",
+            "content": "@@ -129,16 +129,19 @@\n aruel)%0A%09\n+// \n album :=\n@@ -162,16 +162,16 @@\n talbum)%0A\n-\n %0A%09for i \n@@ -264,259 +264,139 @@\n %7B%0A%09%09\n-album%5Bstickers%5Bi%5D-1%5D++%0A%09%7D%0A%0A    var repeated string%0A    var missing string%0A%0A    \n+var count, lastj int%0A%09%09\n for \n-i\n+j\n  := 0; \n-i\n+j\n  %3C qt\n-album; i\n+baruel; j\n ++ %7B%0A\n-        if album%5Bi%5D == 0 %7B%0A            missing += fmt.Sprintf(%22%25d %22, i+1)%0A        %7D%0A        if album%5Bi%5D %3E= 2 %7B%0A            repeated += \n+%09%09%09if stickers%5Bj%5D == stickers%5Bi%5D %7B%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%09lastj = j%0A%09%09%7D%0A%09%09\n fmt.\n-Sp\n+P\n rint\n@@ -404,31 +404,47 @@\n (%22%25d\n- %22, i+1)%0A        %7D%0A    \n+-%25d%22, stickers%5Bi%5D, count)%0A%09%09i = lastj%0A%09\n %7D%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_15-08-48",
+            "content": "@@ -284,17 +284,20 @@\n %5D++%0A%09%7D%0A%0A\n-%09\n+    \n var repe\n@@ -308,17 +308,20 @@\n  string%0A\n-%09\n+    \n var miss\n@@ -332,17 +332,20 @@\n string%0A%0A\n-%09\n+    \n for i :=\n@@ -367,18 +367,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n if album\n@@ -394,19 +394,28 @@\n  == 0 %7B%0A\n-%09%09%09\n+            \n missing \n@@ -445,14 +445,26 @@\n +1)%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n if a\n@@ -482,11 +482,20 @@\n 2 %7B%0A\n-%09%09%09\n+            \n repe\n@@ -530,57 +530,22 @@\n +1)%0A\n-%09%09%7D%0A%09%7D%0A%0A%09fmt.Printf(%22%25s%5Cn%25s%5Cn%22, repeated, missing)\n+        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-14_15-09-18",
+            "content": "@@ -438,17 +438,17 @@\n m%5Bi%5D %3E= \n-1\n+2\n  %7B%0A%09%09%09re\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-14_15-09-36",
+            "content": "@@ -446,67 +446,11 @@\n 1 %7B%0A\n-            for j:= 1; j %3C album%5Bi%5D; j++ %7B%0A                \n+%09%09%09\n repe\n@@ -485,22 +485,8 @@\n +1)%0A\n-            %7D%0A\n %09%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-14_15-25-05",
+            "content": "@@ -563,43 +563,9 @@\n %09%7D%0A%0A\n-    if len(repeated) %3E 0 %7B%0A        \n+%09\n fmt.\n@@ -576,16 +576,20 @@\n tf(%22%25s%5Cn\n+%25s%5Cn\n %22, repea\n@@ -595,173 +595,17 @@\n ated\n-)%0A    %7D else %7B%0A        fmt.Printf(%22%25s%5Cn%22, %22N%22)%0A    %7D%0A%0A    if len(missing) %3E 0 %7B%0A        fmt.Printf(%22%25s%5Cn%22, missing)%0A    %7D else %7B%0A        fmt.Printf(%22%25s%5Cn%22, %22N%22)%0A    %7D\n+, missing)\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-14_15-29-41",
+            "content": "@@ -446,17 +446,25 @@\n 1 %7B%0A\n-%09%09%09\n+            \n for j\n- \n := 1\n@@ -489,12 +489,24 @@\n + %7B%0A\n-%09%09%09%09\n+                \n repe\n@@ -537,19 +537,28 @@\n %22, i+1)%0A\n-%09%09%09\n+            \n %7D%0A%09%09%7D%0A%09%7D\n@@ -563,16 +563,14 @@\n %09%7D%0A%0A\n-%09lrep :=\n+    if\n  len\n@@ -583,48 +583,23 @@\n ted)\n-%0A%09lmis := len(missing)%0A%09if lrep %3E 0 %7B%0A%09%09\n+ %3E 0 %7B%0A        \n fmt.\n@@ -625,20 +625,14 @@\n ated\n-%5B:lrep-1%5D)%0A%09\n+)%0A    \n %7D el\n@@ -628,34 +628,40 @@\n d)%0A    %7D else %7B%0A\n-%09%09\n+        \n fmt.Printf(%22%25s%5Cn\n@@ -672,29 +672,49 @@\n N%22)%0A\n-%09%7D%0A%0A%09if lmis %3E 0 %7B%0A%09%09\n+    %7D%0A%0A    if len(missing) %3E 0 %7B%0A        \n fmt.\n@@ -739,20 +739,14 @@\n sing\n-%5B:lmis-1%5D)%0A%09\n+)%0A    \n %7D el\n@@ -750,18 +750,24 @@\n  else %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -782,13 +782,16 @@\n %22, %22N%22)%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-14_15-34-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtalbum, qtbaruel int\n\tfmt.Scan(&qtalbum, &qtbaruel)\n\tstickers := make([]int, qtbaruel)\n\talbum := make([]int, qtalbum)\n\n\tfor i := 0; i < qtbaruel; i++ {\n\t\tfmt.Scan(&stickers[i])\n\t}\n\n\tfor i := 0; i < qtbaruel; i++ {\n\t\talbum[stickers[i]-1]++\n\t}\n\n\tvar repeated string\n\tvar missing string\n\n\tfor i := 0; i < qtalbum; i++ {\n\t\tif album[i] == 0 {\n\t\t\tmissing += fmt.Sprintf(\"%d \", i+1)\n\t\t}\n\t\tif album[i] >= 1 {\n\t\t\tfor j := 1; j < album[i]; j++ {\n\t\t\t\trepeated += fmt.Sprintf(\"%d \", i+1)\n\t\t\t}\n\t\t}\n\t}\n\n\tlrep := len(repeated)\n\tlmis := len(missing)\n\tif lrep > 0 {\n\t\tfmt.Printf(\"%s\\n\", repeated[:lrep-1])\n\t} else {\n\t\tfmt.Printf(\"%s\\n\", \"N\")\n\t}\n\n\tif lmis > 0 {\n\t\tfmt.Printf(\"%s\\n\", missing[:lmis-1])\n\t} else {\n\t\tfmt.Printf(\"%s\\n\", \"N\")\n\t}\n}\n",
+            "lines": "46"
+        }
+    ]
+}
