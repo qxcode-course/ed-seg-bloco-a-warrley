@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_16-46-41",
+            "content": "@@ -143,90 +143,10 @@\n e, q\n-+1\n )%0A\n-%09for i := 0; i %3C q-1; i++ %7B%0A%09%09fmt.Scanf(%22%25d %25d%22, &snake%5Bi%5D.x, &snake%5Bi%5D.y)%0A%09%7D%0A\n %09// \n@@ -166,18 +166,16 @@\n  %3C q\n--1\n ; i++ %7B%0A\n %09// \n@@ -174,34 +174,8 @@\n + %7B%0A\n-%09// %09snake%5Bi%5D = snake%5Bi+1%5D\n %0A%09//\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_17-03-36",
+            "content": "@@ -139,16 +139,18 @@\n %5Dgome, q\n++1\n )%0A%09for i\n@@ -161,16 +161,18 @@\n 0; i %3C q\n+-1\n ; i++ %7B%0A\n@@ -225,14 +225,12 @@\n %0A%09%7D%0A\n-    %0A%09\n+%09// \n for \n@@ -253,16 +253,19 @@\n  i++ %7B%0A%09\n+// \n %09snake%5Bi\n@@ -280,16 +280,19 @@\n e%5Bi+1%5D%0A%09\n+// \n %7D%0A%09fmt.P\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-14_18-08-19",
+            "content": "@@ -217,16 +217,20 @@\n %5D.y)%0A%09%7D%0A\n+    \n %0A%09for i \n@@ -236,345 +236,71 @@\n  := \n-q - 1; i %3E 0; i-- %7B%0A%09%09snake%5Bi%5D = snake%5Bi-1%5D%0A%09%7D%0A%0A%09if d == %22U%22 %7B%0A%09%09snake%5B0%5D.y--%0A %09%7D else if d == %22D%22 %7B%0A%09%09snake%5B0%5D.y++%0A %09%7D else if d == %22R%22 %7B%0A%09%09snake%5B0%5D.x++%0A %09%7D else if d == %22L%22 %7B%0A%09%09snake%5B0%5D.x--%0A %09%7D%0A%0A%09printSnake(snake, q)%0A%7D%0A%0Afunc printSnake(snake %5B%5Dgome, qt int) %7B%0A%09for i := 0; i %3C qt; i++ %7B%0A%09%09fmt.Printf(%22%25d %25d%5Cn%22, snake%5Bi%5D.x, snake%5Bi%5D.y\n+0; i %3C q-1; i++ %7B%0A%09%09snake%5Bi%5D = snake%5Bi+1%5D%0A%09%7D%0A%09fmt.Println(snake\n )%0A\n-%09\n %7D%0A\n-%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-14_18-19-36",
+            "content": "package main\n\nimport \"fmt\"\n\ntype gome struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tfmt.Scan(&q, &d)\n\n\tsnake := make([]gome, q)\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Scanf(\"%d %d\", &snake[i].x, &snake[i].y)\n\t}\n\n\tfor i := q - 1; i > 0; i-- {\n\t\tsnake[i] = snake[i-1]\n\t}\n\n\tif d == \"U\" {\n\t\tsnake[0].y--\n \t} else if d == \"D\" {\n\t\tsnake[0].y++\n \t} else if d == \"R\" {\n\t\tsnake[0].x++\n \t} else if d == \"L\" {\n\t\tsnake[0].x--\n \t}\n\n\tprintSnake(snake, q)\n}\n\nfunc printSnake(snake []gome, qt int) {\n\tfor i := 0; i < qt; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", snake[i].x, snake[i].y)\n\t}\n}",
+            "lines": "41"
+        }
+    ]
+}
