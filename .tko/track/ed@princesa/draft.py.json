@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-51-01",
+            "content": "@@ -320,20 +320,16 @@\n e %3E= 1:%0A\n-    \n     prin\n@@ -338,20 +338,16 @@\n ()%0A%0A    \n-   \n- \n dead = (\n@@ -362,20 +362,16 @@\n  %25 size%0A\n-    \n     for \n@@ -400,28 +400,24 @@\n 1):%0A        \n-  \n-  \n vector%5Bi%5D = \n@@ -429,20 +429,16 @@\n r%5Bi+1%5D%0A%0A\n-    \n     vect\n@@ -450,20 +450,16 @@\n p()%0A    \n- \n-   \n size -= \n@@ -461,20 +461,16 @@\n e -= 1%0A%0A\n-    \n     if s\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_19-52-19",
+            "content": "@@ -541,17 +541,16 @@\n name__ =\n-=\n  %22__main\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_19-53-45",
+            "content": "@@ -4,28 +4,16 @@\n  printv(\n-vector, size\n ):%0A    p\n@@ -530,38 +530,8 @@\n size\n-%0A    %0A    printv(vector, size)\n %0A%0Aif\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_19-54-50",
+            "content": "@@ -347,28 +347,16 @@\n  printv(\n-vector, size\n )%0A%0A     \n@@ -543,16 +543,41 @@\n ize%0A    \n+%0A    printv(vector, size)\n %0A%0Aif __n\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_19-55-10",
+            "content": "@@ -16,23 +16,16 @@\n or, size\n-, sword\n ):%0A    p\n@@ -359,23 +359,16 @@\n or, size\n-, sword\n )%0A%0A     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_19-55-26",
+            "content": "def printv(vector, size, sword):\n    print(\"[ \", end=\"\")\n    for i in range(size):\n        print(vector[i], end=\"\")\n        if i == sword:\n            print(\">\", end=\"\")\n        print(\" \", end=\"\")\n    print(\"]\")\n\ndef main():\n    size, sword = map(int, input().split()); sword -= 1\n    vector = [i for i in range(1, size+1)]\n\n    while size >= 1:\n        printv(vector, size, sword)\n\n        dead = (sword+1) % size\n        for i in range(dead, size-1):\n            vector[i] = vector[i+1]\n\n        vector.pop()\n        size -= 1\n\n        if size != 0: sword = dead % size\n    \n\nif __name__ == \"__main__\": main()",
+            "lines": "27"
+        }
+    ]
+}

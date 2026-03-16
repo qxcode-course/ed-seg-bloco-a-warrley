@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-06-12",
+            "content": "@@ -206,20 +206,16 @@\n         \n-    \n %7D else %7B\n@@ -215,20 +215,16 @@\n  else %7B%0A\n-    \n         \n@@ -254,42 +254,15 @@\n     \n+%7D%0A\n     %7D\n-%0A        %7D%0A    fmt.Print(%22%5D%22)\n %0A%7D%0A%0A\n@@ -288,17 +288,16 @@\n , sword \n-*\n int, siz\n@@ -298,24 +298,28 @@\n t, size int)\n+ int\n  %7B%0A    vet%5B*\n@@ -317,17 +317,16 @@\n     vet%5B\n-*\n sword%5D =\n@@ -336,19 +336,16 @@\n     \n-*sword =\n+return\n  (\n-*\n swor\n@@ -494,63 +494,8 @@\n    %7D\n-%0A    kill(vet, &e, n)%0A    fmt.Print(e)%0A    for %7B%0A%0A    %7D\n %0A%0A  \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-16_19-12-30",
+            "content": "@@ -334,17 +334,16 @@\n t, size \n-*\n int) %7B%0A \n@@ -365,20 +365,8 @@\n = 0%0A\n-    *size--%0A\n     \n@@ -385,17 +385,16 @@\n word+1)%25\n-*\n size%0A%7D%0A%0A\n@@ -535,33 +535,8 @@\n     \n-%0A    for n %3E 0 %7B%0A        \n kill\n@@ -546,35 +546,41 @@\n t, &\n-n, &e\n+e, n\n )%0A    \n-    show(vet, e)\n+fmt.Print(e)%0A    for %7B%0A\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-16_19-14-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc show(vet []int, sword int) {\n    fmt.Print(\"[ \")\n    for i := 0; i < len(vet); i++ {\n        fmt.Printf(\"%d\", vet[i])\n        if i == sword-1 {\n            fmt.Print(\"> \")\n            } else {\n                fmt.Print(\" \")\n            }\n        }\n    fmt.Print(\"]\")\n}\n\nfunc kill(vet []int, sword *int, size *int) {\n    vet[*sword] = 0\n    *size--\n    *sword = (*sword+1)%*size\n}\n\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n    vet := make([]int, n)\n    for i := 0; i < n; i++ {\n        vet[i] = i+1\n    }\n    \n    for n > 0 {\n        kill(vet, &n, &e)\n        show(vet, e)\n    }\n\n    show(vet, e)\n}\n",
+            "lines": "38"
+        }
+    ]
+}
