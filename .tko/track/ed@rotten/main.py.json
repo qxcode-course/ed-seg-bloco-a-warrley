@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-45-08",
+            "content": "from collections import deque\n\ndef show(g: list[list[int]]) -> None:\n\tfor row in g:\n\t\tprint(*row)\n\ndef orangesRotting(grid: list[list[int]]) -> int:\n\td: deque = deque()\n\ttime, freshs = 0, 0\n\n\tfor i in range(len(grid)):\n\t\tfor j in range(len(grid[0])):\n\t\t\tif grid[i][j] == 1: freshs += 1\n\t\t\tif grid[i][j] == 2: d.append((i, j))\n\t\t\n\twhile len(d) > 0 and freshs > 0:\n\t\t# print(f\"\\nt={time}\")\n\t\t# show(grid)\n\t\t# print(d)\n\t\ttime += 1\n\t\tfor _ in range(len(d)):\n\t\t\ti, j = d.popleft()\n\t\t\t# print(freshs, time, d, i, j)\n\t\t\tif i+1 < len(grid) and grid[i+1][j] == 1:\n\t\t\t\tgrid[i+1][j] = 2\n\t\t\t\tfreshs -= 1\n\t\t\t\td.append((i+1, j))\n\t\t\tif i-1 >= 0 and grid[i-1][j] == 1:\n\t\t\t\tgrid[i-1][j] = 2\n\t\t\t\tfreshs -= 1\n\t\t\t\td.append((i-1, j))\n\t\t\tif j+1 < len(grid[0]) and grid[i][j+1] == 1:\n\t\t\t\tgrid[i][j+1] = 2\n\t\t\t\tfreshs -= 1\n\t\t\t\td.append((i, j+1))\n\t\t\tif j-1 >= 0 and grid[i][j-1] == 1:\n\t\t\t\tgrid[i][j-1] = 2\n\t\t\t\tfreshs -= 1\n\t\t\t\td.append((i, j-1))\n\n\t\t\t# # with loop in directions \n\t\t\t# directions = [(0,1), (1,0), (0,-1), (-1,0)]\n\t\t\t# for r, c in directions:\n\t\t\t# \trow = r+i\n\t\t\t# \tcol = c+j\n\t\t\t# \tif row >= 0 and col >= 0 and row < len(grid) and col < len(grid[0]) and grid[row][col] == 1:\n\t\t\t# \t\tgrid[row][col] = 2\n\t\t\t# \t\tfreshs -= 1\n\t\t\t# \t\td.append((row, col))\n\treturn time if freshs == 0 else -1\n\n# N\u00e3o modifique a main\ndef main() -> None:\n\tnl, nc = map(int, input().split())\n\tgrid = [list(map(int, input().split())) for _ in range(nl)]\n\tprint(orangesRotting(grid))\n\nif __name__ == \"__main__\": main()",
+            "lines": "58"
+        }
+    ]
+}

@@ -19,6 +19,7 @@ expanded:
 - ed@main-quest
 - ed@análise
 - ed@busca-em-profundidade
+- ed@busca-em-largura
 - ed@revisão
 tasks:
   ed@pintando: '{self:1, rate:100}'
@@ -49,7 +50,8 @@ tasks:
   ed@labirinto: '{self:1, rate:100}'
   ed@pintura: '{self:1, rate:100}'
   ed@longest: '{self:1, rate:100}'
-  ed@battleship: '{rate:100}'
+  ed@battleship: '{self:1, rate:100}'
+  ed@rotten: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -58,4 +60,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@battleship
+selected: ed@rotten
