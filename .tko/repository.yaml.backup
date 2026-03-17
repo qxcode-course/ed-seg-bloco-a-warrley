@@ -18,6 +18,7 @@ expanded:
 - ed@recursão
 - ed@main-quest
 - ed@análise
+- ed@busca-em-profundidade
 - ed@revisão
 tasks:
   ed@pintando: '{self:1, rate:100}'
@@ -41,7 +42,8 @@ tasks:
   ed@eh_primo: '{self:1, rate:100}'
   ed@enesimo: '{self:1, rate:100}'
   ed@vetequals: '{self:1, rate:100}'
-  ed@priminhos: '{rate:100}'
+  ed@priminhos: '{self:1, rate:100}'
+  ed@queimada: '{rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -50,4 +52,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@priminhos
+selected: ed@queimada
