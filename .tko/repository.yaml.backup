@@ -30,6 +30,8 @@ tasks:
   ed@princesa: '{self:1, rate:100}'
   ed@apagando: '{self:1, rate:100}'
   ed@manipulacao: '{self:1, rate:100}'
+  ed@especiais: '{self:1, rate:100}'
+  ed@buscas: '{rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -38,4 +40,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@manipulacao
+selected: ed@buscas

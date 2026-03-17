@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-18-54",
+            "content": "size_string = int(input())\nstrings = input().split(\" \")\nsize_substring = int(input())\nsubstrings = input().split(\" \")\n\nres = [0]*size_substring\n\nfor i in range(len(substrings)):\n    for j in range(len(strings)):\n        if substrings[i] == strings[j]: res[i] += 1\n        # print(f\"ws={substrings[i]} wt={strings[j]} c={res}\")\n\nprint(*res)",
+            "lines": "13"
+        }
+    ]
+}
