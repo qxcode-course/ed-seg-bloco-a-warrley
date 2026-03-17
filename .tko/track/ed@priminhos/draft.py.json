@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-35-18",
+            "content": "from math import sqrt\n\ndef is_prime(num: int, i: int = 2) -> bool | None:\n    # print(num, i)\n    if (num % i == 0 and num != i) or num == 1: return False\n    return True if num == i else is_prime(num, i+1)\n\ndef primes(qt: int, count = 0, num: int = 2) -> list[int]:\n    # print(qt, count, num)\n    num_is_prime = is_prime(num)\n    if count == qt: return []\n    if num_is_prime: count +=1\n    return [num] + primes(qt, count, num+1) if num_is_prime else primes(qt, count, num+1)\n\ndef main() -> None:\n    num: int = int(input())\n    print(primes(num))\n    # print(is_prime(num))\nif __name__ == \"__main__\":\n    main()",
+            "lines": "20"
+        }
+    ]
+}
