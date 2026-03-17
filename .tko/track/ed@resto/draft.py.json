@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-27-44",
+            "content": "def break_num(num: int) -> None:\n    # quotient: int = num//2\n    # rest: int = num%2\n    if num == 0: return\n    break_num(num//2)\n    print(num//2, num%2)\n\ndef main() -> None:\n    num: int = int(input())\n    break_num(num)\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "13"
+        }
+    ]
+}

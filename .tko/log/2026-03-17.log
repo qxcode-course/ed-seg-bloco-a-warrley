@@ -37,3 +37,6 @@
 2026-03-17 13:26:20, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:55
 2026-03-17 13:26:22, MOVE, v:1, k:ed@treinando, mode:BACK
 2026-03-17 13:26:31, SELF, v:1, k:ed@treinando, self:1, rate:83
+2026-03-17 13:27:04, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-03-17 13:27:08, MOVE, v:1, k:ed@resto, mode:PICK
+2026-03-17 13:27:44, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:13
