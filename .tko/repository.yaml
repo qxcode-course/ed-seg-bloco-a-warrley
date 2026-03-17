@@ -48,6 +48,7 @@ tasks:
   ed@cercado: '{self:1, rate:100}'
   ed@labirinto: '{self:1, rate:100}'
   ed@pintura: '{self:1, rate:100}'
+  ed@longest: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -56,4 +57,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@longest
+selected: ed@battleship

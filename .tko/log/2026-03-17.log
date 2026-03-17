@@ -107,3 +107,9 @@
 2026-03-17 13:41:45, MOVE, v:1, k:ed@longest, mode:DOWN
 2026-03-17 13:41:52, MOVE, v:1, k:ed@longest, mode:PICK
 2026-03-17 13:42:35, MOVE, v:1, k:ed@longest, mode:BACK
+2026-03-17 13:42:55, MOVE, v:1, k:ed@longest, mode:DOWN
+2026-03-17 13:42:55, MOVE, v:1, k:ed@longest, mode:PICK
+2026-03-17 13:43:01, EXEC, v:1, k:ed@longest, mode:FULL, rate:100, size:33
+2026-03-17 13:43:02, MOVE, v:1, k:ed@longest, mode:BACK
+2026-03-17 13:43:04, SELF, v:1, k:ed@longest, self:1, rate:100
+2026-03-17 13:43:06, MOVE, v:1, k:ed@battleship, mode:DOWN
