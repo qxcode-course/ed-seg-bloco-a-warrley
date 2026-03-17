@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-23-55",
+            "content": "def printv(v):\n    print(\"[ \", end=\"\")\n    print(*v, end=\"\")\n    print(\" ]\")\n\ndef sum_neighbors(v, i):\n    if len(v)-1 == i: return []\n    sum = v[i] + v[i+1]\n    return [sum] + sum_neighbors(v, i+1)\n\ndef triangle(vec):\n    if len(vec) == 1: \n        printv(vec)\n        return\n    vecb = sum_neighbors(vec, 0)\n    triangle(vecb)\n    printv(vec)\n\ndef main():\n    vec = list(map(int, input().split()))\n    triangle(vec)\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "24"
+        }
+    ]
+}
