@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-21-42",
+            "content": "def printv(v, sword):\n    vec_str = list(map(str, v))\n    if int(vec_str[sword]) < 0: vec_str[sword] = \"<\" + vec_str[sword]\n    elif int(vec_str[sword]) > 0: vec_str[sword] = vec_str[sword] + \">\"\n    print(f\"[ {\" \".join(vec_str)} ]\")\n\ndef rem(v, i):\n    for i in range(i, len(v)-1):\n        v[i] = v[i+1]\n    v.pop()\n\n\n# program\n\nsize, sword, phase = map(int, input().split())\nsword -= 1\n\nvec = [0]*size\n\nfor i in range(size):\n    if (phase == 1 and i % 2 == 0) or (phase == -1 and i % 2 != 0): vec[i] = i+1\n    if (phase == 1 and i % 2 != 0) or (phase == -1 and i % 2 == 0): vec[i] = -(i+1)\n\nwhile vec:\n    printv(vec, sword)\n    copy_len = len(vec)\n    if vec[sword] > 0: \n        # print(sword, len(vec)-1)\n        rem(vec, (sword+1)%len(vec))\n        # print(f\"s={sword} l={len(vec)} cl={copy_len}\")\n        if len(vec) > 0:\n            if sword == len(vec): sword = (sword+1)%copy_len\n            else: sword = (sword+1)%len(vec)\n    elif vec[sword] < 0: \n        # print(sword, len(vec)-1)\n        rem(vec, (sword-1)%len(vec))\n        if len(vec) > 0:\n            if  sword != 0: sword = (sword-2)%len(vec)\n            else: sword = (sword-2)%copy_len\n        ",
+            "lines": "40"
+        }
+    ]
+}
