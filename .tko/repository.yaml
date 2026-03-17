@@ -49,6 +49,7 @@ tasks:
   ed@labirinto: '{self:1, rate:100}'
   ed@pintura: '{self:1, rate:100}'
   ed@longest: '{self:1, rate:100}'
+  ed@battleship: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
