@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-32-51",
+            "content": "def equals(v1: list[int], v2: list[int], i: int = 0) -> bool:\n    try: \n        # print(f\"i={i} v1[i]={v1[i]} v2[i]={v2[i]}\")\n        if v1[i] != v2[i]: return False \n        return equals(v1, v2, i+1)\n    except IndexError: \n        try:\n            v1[i]\n            return False\n        except IndexError:\n            try:\n                v2[i]\n                return False\n            except IndexError:\n                return True\n\n\ndef main() -> None:\n    v1: list[int] = list(map(int, input().strip(\"[  ]\").split()))\n    v2: list[int] = list(map(int, input().strip(\"[  ]\").split()))\n    print(\"iguais\" if equals(v1, v2) else \"diferentes\")\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "24"
+        }
+    ]
+}

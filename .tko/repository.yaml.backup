@@ -40,6 +40,7 @@ tasks:
   ed@mdc: '{self:1, rate:100}'
   ed@eh_primo: '{self:1, rate:100}'
   ed@enesimo: '{self:1, rate:100}'
+  ed@vetequals: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
