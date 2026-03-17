@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-31-45",
+            "content": "def is_prime(num: int, i: int = 2) -> bool:\n    if (num % i == 0 and num != i) or num == 1: return False\n    return True if num == i else is_prime(num, i+1)\n\ndef n_prime(pos: int, count: int = 0, num: int = 2) -> int:\n    # print(f\"pos={pos} count={count} num={num}\")\n    if pos == count: return num\n    if is_prime(num): count += 1\n    return n_prime(pos, count, num+1)\n\ndef main() -> None:\n    pos: int = int(input())\n    print(n_prime(pos)-1)\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "16"
+        }
+    ]
+}

@@ -38,7 +38,8 @@ tasks:
   ed@treinando: '{self:1, rate:83}'
   ed@resto: '{self:1, rate:100}'
   ed@mdc: '{self:1, rate:100}'
-  ed@eh_primo: '{rate:100}'
+  ed@eh_primo: '{self:1, rate:100}'
+  ed@enesimo: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -47,4 +48,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@eh_primo
+selected: ed@priminhos
