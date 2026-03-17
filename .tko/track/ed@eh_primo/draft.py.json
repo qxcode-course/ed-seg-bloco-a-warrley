@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-30-44",
+            "content": "def prime(num: int, i: int = 2) -> bool | None:\n    # print(num, i)\n    if (num % i == 0 and num != i) or num == 1: return False\n    return True if num == i else prime(num, i+1)\n\ndef main() -> None:\n   num: int = int(input())\n   res = prime(num)\n   print(\"false\" if not res else \"true\")\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "12"
+        }
+    ]
+}
