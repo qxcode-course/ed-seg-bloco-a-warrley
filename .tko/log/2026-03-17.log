@@ -17,3 +17,8 @@
 2026-03-17 13:18:54, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:13
 2026-03-17 13:18:55, MOVE, v:1, k:ed@buscas, mode:BACK
 2026-03-17 13:19:02, SELF, v:1, k:ed@buscas, self:1, rate:100
+2026-03-17 13:19:39, MOVE, v:1, k:ed@rotacoes, mode:DOWN
+2026-03-17 13:19:41, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-03-17 13:20:08, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100, size:9
+2026-03-17 13:20:13, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-03-17 13:20:17, SELF, v:1, k:ed@rotacoes, self:1, rate:100
