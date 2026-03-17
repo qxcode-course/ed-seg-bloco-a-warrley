@@ -10,17 +10,17 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-17 13:13:44'
+  cache_timestamp: '2026-03-17 18:39:59'
   quests: null
   tasks: null
 expanded:
-- sandbox@student_sandbox_alias:00_rascunhos
-- ed@recursão
+- ed@busca-em-largura
 - ed@main-quest
+- ed@revisão
 - ed@análise
 - ed@busca-em-profundidade
-- ed@busca-em-largura
-- ed@revisão
+- sandbox@student_sandbox_alias:00_rascunhos
+- ed@recursão
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -63,4 +63,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@escapeSpread
+selected: ed@labirinto
