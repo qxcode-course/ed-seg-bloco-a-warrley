@@ -7,3 +7,5 @@
 2026-03-17 13:14:58, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:14
 2026-03-17 13:14:59, MOVE, v:1, k:ed@apagando, mode:BACK
 2026-03-17 13:15:02, SELF, v:1, k:ed@apagando, self:1, rate:100
+2026-03-17 13:16:29, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-03-17 13:16:36, MOVE, v:1, k:ed@especiais, mode:PICK
