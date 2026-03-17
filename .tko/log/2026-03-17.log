@@ -99,3 +99,11 @@
 2026-03-17 13:39:37, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:40
 2026-03-17 13:39:37, MOVE, v:1, k:ed@labirinto, mode:BACK
 2026-03-17 13:39:41, SELF, v:1, k:ed@labirinto, self:1, rate:100
+2026-03-17 13:41:02, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-03-17 13:41:11, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-03-17 13:41:38, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100, size:57
+2026-03-17 13:41:40, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-03-17 13:41:44, SELF, v:1, k:ed@pintura, self:1, rate:100
+2026-03-17 13:41:45, MOVE, v:1, k:ed@longest, mode:DOWN
+2026-03-17 13:41:52, MOVE, v:1, k:ed@longest, mode:PICK
+2026-03-17 13:42:35, MOVE, v:1, k:ed@longest, mode:BACK
