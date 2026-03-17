@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-14-58",
+            "content": "n = int(input())\nqueue = list(map(int, input().split()))\nm = int(input())\nleave = set(map(int, input().split()))\n\nresult = []\n\nfor person in queue:\n    if person not in leave:\n        result.append(person)\n\nfor r in result:\n    print(r, end=\" \")\nprint()\n",
+            "lines": "14"
+        }
+    ]
+}
