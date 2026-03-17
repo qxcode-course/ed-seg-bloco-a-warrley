@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-28-50",
+            "content": "def mdc(a: int, b: int) -> int:\n    if a == 0: return b\n    if b == 0: return a\n    return mdc(a%b, b) if a > b else mdc(a, b%a)\n\ndef main() -> None:\n    a: int = int(input())\n    b: int = int(input())\n    print(mdc(a,b))\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "12"
+        }
+    ]
+}
