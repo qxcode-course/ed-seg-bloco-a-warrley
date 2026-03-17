@@ -43,7 +43,8 @@ tasks:
   ed@enesimo: '{self:1, rate:100}'
   ed@vetequals: '{self:1, rate:100}'
   ed@priminhos: '{self:1, rate:100}'
-  ed@queimada: '{rate:100}'
+  ed@queimada: '{self:1, rate:100}'
+  ed@ilhas: '{rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -52,4 +53,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@queimada
+selected: ed@ilhas

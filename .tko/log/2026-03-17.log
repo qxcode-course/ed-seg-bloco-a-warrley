@@ -81,3 +81,8 @@
 2026-03-17 13:36:30, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:23
 2026-03-17 13:36:31, MOVE, v:1, k:ed@queimada, mode:BACK
 2026-03-17 13:36:34, SELF, v:1, k:ed@queimada, self:1, rate:100
+2026-03-17 13:36:48, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-03-17 13:36:50, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-03-17 13:37:23, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:33
+2026-03-17 13:37:24, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-03-17 13:37:27, SELF, v:1, k:ed@ilhas, self:1, rate:100

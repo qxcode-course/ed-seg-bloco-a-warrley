@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-37-23",
+            "content": "from typing import List\n\ndef show(m):\n    for row in m:\n        print(*row)\n\ndef search(m: List[List[str]], i: int, j: int) -> None:\n    if i < 0 or i >= len(m) or j < 0 or j >= len(m[0]) or m[i][j] == \"0\" or m[i][j] == \"x\": return \n        \n    m[i][j] = \"x\"\n    # show(m)\n    # print(\"\")\n    search(m, i+1, j)\n    search(m, i-1, j)\n    search(m, i, j-1)\n    search(m, i, j+1)\n\ndef main() -> None: \n    rows, columns = map(int, input().split())\n    matrix: List[List[str]] = [list(input()) for _ in range(rows)]\n\n    count: int = 0\n    for i in range(rows):\n        for j in range(columns):\n            if matrix[i][j] == \"1\":\n                search(matrix, i, j)\n                count += 1\n\n    \n    print(count)\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "33"
+        }
+    ]
+}
