@@ -86,3 +86,10 @@
 2026-03-17 13:37:23, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:33
 2026-03-17 13:37:24, MOVE, v:1, k:ed@ilhas, mode:BACK
 2026-03-17 13:37:27, SELF, v:1, k:ed@ilhas, self:1, rate:100
+2026-03-17 13:38:12, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-03-17 13:38:13, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-03-17 13:38:33, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:41
+2026-03-17 13:38:39, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-03-17 13:38:42, SELF, v:1, k:ed@cercado, self:1, rate:100
+2026-03-17 13:38:43, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-03-17 13:38:43, MOVE, v:1, k:ed@labirinto, mode:PICK
