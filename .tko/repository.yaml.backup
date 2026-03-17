@@ -52,6 +52,7 @@ tasks:
   ed@longest: '{self:1, rate:100}'
   ed@battleship: '{self:1, rate:100}'
   ed@rotten: '{self:1, rate:100}'
+  ed@caminho: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -60,4 +61,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@rotten
+selected: ed@caminho
