@@ -14,12 +14,12 @@ sources:
   tasks: null
 expanded:
 - ed@análise
-- ed@busca-em-largura
+- ed@revisão
 - ed@main-quest
 - ed@recursão
-- ed@busca-em-profundidade
 - sandbox@student_sandbox_alias:00_rascunhos
-- ed@revisão
+- ed@busca-em-profundidade
+- ed@busca-em-largura
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -61,5 +61,5 @@ flags:
   tasks: 0
   task_graph_mode: 0
   show_time: 0
-lang: py
-selected: ed@rotten
+lang: go
+selected: ed@gomos

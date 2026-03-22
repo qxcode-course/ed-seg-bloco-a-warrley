@@ -17,7 +17,12 @@
         },
         {
             "label": "2026-03-14_18-19-36",
-            "content": "package main\n\nimport \"fmt\"\n\ntype gome struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tfmt.Scan(&q, &d)\n\n\tsnake := make([]gome, q)\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Scanf(\"%d %d\", &snake[i].x, &snake[i].y)\n\t}\n\n\tfor i := q - 1; i > 0; i-- {\n\t\tsnake[i] = snake[i-1]\n\t}\n\n\tif d == \"U\" {\n\t\tsnake[0].y--\n \t} else if d == \"D\" {\n\t\tsnake[0].y++\n \t} else if d == \"R\" {\n\t\tsnake[0].x++\n \t} else if d == \"L\" {\n\t\tsnake[0].x--\n \t}\n\n\tprintSnake(snake, q)\n}\n\nfunc printSnake(snake []gome, qt int) {\n\tfor i := 0; i < qt; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", snake[i].x, snake[i].y)\n\t}\n}",
+            "content": "@@ -177,17 +177,27 @@\n fmt.Scan\n-(\n+f(%22%25d %25d%22, \n &snake%5Bi\n@@ -569,9 +569,8 @@\n .y)%0A%09%7D%0A%7D\n-%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-22_14-16-39",
+            "content": "package main\n\nimport \"fmt\"\n\ntype gome struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tfmt.Scan(&q, &d)\n\n\tsnake := make([]gome, q)\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Scan(&snake[i].x, &snake[i].y)\n\t}\n\n\tfor i := q - 1; i > 0; i-- {\n\t\tsnake[i] = snake[i-1]\n\t}\n\n\tif d == \"U\" {\n\t\tsnake[0].y--\n \t} else if d == \"D\" {\n\t\tsnake[0].y++\n \t} else if d == \"R\" {\n\t\tsnake[0].x++\n \t} else if d == \"L\" {\n\t\tsnake[0].x--\n \t}\n\n\tprintSnake(snake, q)\n}\n\nfunc printSnake(snake []gome, qt int) {\n\tfor i := 0; i < qt; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", snake[i].x, snake[i].y)\n\t}\n}\n",
             "lines": "41"
         }
     ]

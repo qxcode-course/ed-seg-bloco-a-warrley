@@ -14,7 +14,7 @@ func main() {
 
 	snake := make([]gome, q)
 	for i := 0; i < q; i++ {
-		fmt.Scanf("%d %d", &snake[i].x, &snake[i].y)
+		fmt.Scan(&snake[i].x, &snake[i].y)
 	}
 
 	for i := q - 1; i > 0; i-- {

@@ -1,0 +1,7 @@
+2026-03-22 14:16:14, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-22 14:16:16, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 14:16:17, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:2
+2026-03-22 14:16:23, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 14:16:36, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 14:16:39, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:41
+2026-03-22 14:16:41, MOVE, v:1, k:ed@gomos, mode:BACK
