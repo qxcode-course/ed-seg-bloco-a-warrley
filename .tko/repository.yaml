@@ -13,13 +13,13 @@ sources:
   quests: null
   tasks: null
 expanded:
+- sandbox@student_sandbox_alias:00_rascunhos
 - ed@análise
 - ed@revisão
-- ed@main-quest
-- ed@recursão
-- sandbox@student_sandbox_alias:00_rascunhos
-- ed@busca-em-profundidade
 - ed@busca-em-largura
+- ed@recursão
+- ed@busca-em-profundidade
+- ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -62,4 +62,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@apagando
