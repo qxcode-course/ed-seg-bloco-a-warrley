@@ -12,8 +12,48 @@
         },
         {
             "label": "2026-03-16_19-14-28",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc show(vet []int, sword int) {\n    fmt.Print(\"[ \")\n    for i := 0; i < len(vet); i++ {\n        fmt.Printf(\"%d\", vet[i])\n        if i == sword-1 {\n            fmt.Print(\"> \")\n            } else {\n                fmt.Print(\" \")\n            }\n        }\n    fmt.Print(\"]\")\n}\n\nfunc kill(vet []int, sword *int, size *int) {\n    vet[*sword] = 0\n    *size--\n    *sword = (*sword+1)%*size\n}\n\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n    vet := make([]int, n)\n    for i := 0; i < n; i++ {\n        vet[i] = i+1\n    }\n    \n    for n > 0 {\n        kill(vet, &n, &e)\n        show(vet, e)\n    }\n\n    show(vet, e)\n}\n",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -24,26 +24,107 @@\n mt%22%0A\n+%0A\n func \n-main() %7B%0A\n+show(vet %5B%5Dint, sword int) %7B%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C len(vet); i++ %7B%0A   \n     \n+ \n fmt.\n@@ -132,26 +132,511 @@\n rint\n-ln(%22Hello, World!%22\n+f(%22%25d%22, vet%5Bi%5D)%0A        if i == sword-1 %7B%0A            fmt.Print(%22%3E %22)%0A            %7D else %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A        %7D%0A    fmt.Print(%22%5D%22)%0A%7D%0A%0Afunc kill(vet %5B%5Dint, sword *int, size *int) %7B%0A    vet%5B*sword%5D = 0%0A    *size--%0A    *sword = (*sword+1)%25*size%0A%7D%0A%0Afunc main() %7B%0A    var n, e int%0A    fmt.Scan(&n, &e)%0A    vet := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        vet%5Bi%5D = i+1%0A    %7D%0A    %0A    for n %3E 0 %7B%0A        kill(vet, &n, &e)%0A        show(vet, e)%0A    %7D%0A%0A    show(vet, e\n )%0A%7D%0A\n",
             "lines": "38"
+        },
+        {
+            "label": "2026-03-24_06-18-15",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -37,137 +37,39 @@\n ) %7B%0A\n-%09n, sword := 0%0A%09fmt.Scan(&n, &sword)%0A%09vet := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09vet%5Bi%5D = i+1%0A%09%7D%0A%0A%09fmt.Print(n, sword, vet\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-24_06-28-18",
+            "content": "@@ -50,11 +50,8 @@\n d :=\n- 0,\n  0%0A%09\n@@ -142,11 +142,10 @@\n %0A%09%7D%0A\n+%0A\n %09\n-//\n fmt.\n@@ -169,358 +169,6 @@\n et)%0A\n-%09show(vet, sword)%09%0A//%09for n %3E 1 %7B%0A//%09%09%0A//%09%7D%0A%7D%0A%0Afunc index_next_vivo(vet %5B%5Dint, n int) return int %7B%0A%09for i, v := range vet %7B%0A%09%09if v != 0 %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Afunc show(vet int%5B%5D, sword int) %7B%0A%09fmt.Print(%22%5B%22)%0A%09for i, v := range vet %7B%0A%09%09if v != 0 %7B%0A%09%09%09fmt.Print(v)%0A%09%09%09if i == sword-1 %7B%0A%09%09%09%09fmt.Print(%22%3E%22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Print(%22%5D%22)%0A%7D \n+%7D\n %0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-24_06-48-18",
+            "content": "@@ -254,16 +254,23 @@\n , n int)\n+ return\n  int %7B%0A%09\n@@ -343,21 +343,21 @@\n how(vet \n-%5B%5D\n int\n+%5B%5D\n , sword \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-24_06-49-12",
+            "content": "@@ -323,19 +323,8 @@\n %0A%09%7D%0A\n-%09return -1%0A\n %7D%0A%0Af\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-24_06-49-41",
+            "content": "@@ -78,17 +78,8 @@\n rd)%0A\n-%09sword--%0A\n %09vet\n@@ -170,18 +170,16 @@\n , vet)%0A%09\n-//\n show(vet\n@@ -190,315 +190,137 @@\n ord)\n-%0A%09alives := n %0A%09for alives %3E 1 %7B%0A%09%09show(vet, sword)%0A%0A%09%09next_alive := index_next_vivo(vet, n, sword)%0A%09%09vet%5Bnext_alive%5D = 0%0A%09%09alives--%0A%09%09%0A%09%09sword = index_next_vivo(vet, n, sword)%0A%09%7D%0A%7D%0A%0Afunc index_next_vivo(vet %5B%5Dint, n int, sword int) int %7B%0A%09next := (sword + 1) %25 n%0A%09for vet%5Bnext%5D != 0 %7B%0A%09%09next = (next+1) %25 n\n+%09%0A//%09for n %3E 1 %7B%0A//%09%09%0A//%09%7D%0A%7D%0A%0Afunc index_next_vivo(vet %5B%5Dint, n int) int %7B%0A%09for i, v := range vet %7B%0A%09%09if v != 0 %7B%0A%09%09%09return i%0A%09%09%7D\n %0A%09%7D%0A\n@@ -327,20 +327,18 @@\n %09return \n-next\n+-1\n %0A%7D%0A%0Afunc\n@@ -454,16 +454,18 @@\n == sword\n+-1\n  %7B%0A%09%09%09%09f\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-24_07-11-42",
+            "content": "@@ -476,17 +476,17 @@\n t%5Bnext%5D \n-=\n+!\n = 0 %7B%0A%09%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-24_07-17-32",
+            "content": "@@ -377,34 +377,16 @@\n ord)%0A%09%7D%0A\n-%09show(vet, sword)%0A\n %7D%0A%0Afunc \n@@ -571,17 +571,16 @@\n Print(%22%5B\n- \n %22)%0A%09for \n@@ -711,10 +711,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-24_07-19-23",
+            "content": "package main\n\nimport \"fmt\"\nfunc main() {\n\tn, sword := 0, 0\n\tfmt.Scan(&n, &sword)\n\tsword--\n\tvet := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tvet[i] = i+1\n\t}\n\t//fmt.Print(n, sword, vet)\n\t//show(vet, sword)\n\talives := n \n\tfor alives > 1 {\n\t\tshow(vet, sword)\n\n\t\tnext_alive := index_next_vivo(vet, n, sword)\n\t\tvet[next_alive] = 0\n\t\talives--\n\t\t\n\t\tsword = index_next_vivo(vet, n, sword)\n\t}\n\tshow(vet, sword)\n}\n\nfunc index_next_vivo(vet []int, n int, sword int) int {\n\tnext := (sword + 1) % n\n\tfor vet[next] == 0 {\n\t\tnext = (next+1) % n\n\t}\n\treturn next\n}\n\nfunc show(vet []int, sword int) {\n\tfmt.Print(\"[ \")\n\tfor i, v := range vet {\n\t\tif v != 0 {\n\t\t\tfmt.Print(v)\n\t\t\tif i == sword {\n\t\t\t\tfmt.Print(\">\")\n\t\t\t}\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n} \n",
+            "lines": "47"
         }
     ]
 }

@@ -13,13 +13,10 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@analise-map_set-map_set-basic
+- '@ed@analise-map_set-map_set-basic_sem_quest'
 - sandbox@student_sandbox_alias:00_rascunhos
-- ed@análise
-- ed@revisão
-- ed@busca-em-largura
-- ed@recursão
-- ed@busca-em-profundidade
-- ed@main-quest
+- '@ed@revisao-basic-basic_sem_quest'
 tasks:
   ed@pintando: '{self:1, rate:100}'
   ed@mumia: '{self:1, rate:100}'
@@ -62,4 +59,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@apagando
+selected: ed@princesa
