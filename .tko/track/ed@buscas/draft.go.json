@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-04_16-40-51",
+            "content": "@@ -24,278 +24,8 @@\n mt%22%0A\n-%0Afunc matchingStrings (vcon %5B%5Dstring, vbus %5B%5Dstring) %5B%5Dint %7B%0A    res := make(%5B%5Dint, len(vbus))%0A    freq := make(map%5Bstring%5Dint)%0A%0A    for _, str := range vcon %7B%0A        freq%5Bstr%5D++%0A    %7D%0A%0A    for i, str := range vbus %7B%0A        res%5Bi%5D = freq%5Bstr%5D%0A    %7D%0A%0A    return res%0A%7D%0A%0A\n func\n@@ -96,22 +96,19 @@\n  make(%5B%5D\n-str\n in\n-g\n+t\n , ncon)%0A\n@@ -196,14 +196,11 @@\n e(%5B%5D\n-str\n in\n-g\n+t\n , nb\n@@ -277,107 +277,30 @@\n     \n-res := matchingStrings(vcon, vbus)%0A%0A    for _, res := range res %7B%0A        fmt.Printf(%22%25d%22, res)%0A    \n+fmt.Println(vcon, vbus)%0A\n %7D%0A\n-%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-04_17-04-59",
+            "content": "@@ -496,18 +496,24 @@\n  := \n-range nbus\n+0; i %3C nbus; i++\n  %7B%0A \n@@ -549,35 +549,8 @@\n  %7D%0A%0A\n-    fmt.Print(vbus, vcon)%0A%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-04_17-05-43",
+            "content": "@@ -496,24 +496,18 @@\n  := \n-0; i %3C nbus; i++\n+range nbus\n  %7B%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-04_17-06-16",
+            "content": "@@ -449,32 +449,8 @@\n   %7D%0A\n-    %0A    fmt.Scan(&ncon)\n %0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-04_17-07-07",
+            "content": "@@ -465,19 +465,19 @@\n .Scan(&n\n-bus\n+con\n )%0A    vb\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-07-18",
+            "content": "@@ -564,28 +564,51 @@\n s%5Bi%5D)%0A    %7D%0A\n+%0A\n     \n+fmt.Print(vbus, vcon)%0A\n %0A    res := \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-07-30",
+            "content": "@@ -564,24 +564,28 @@\n s%5Bi%5D)%0A    %7D%0A\n+    \n %0A    res := \n@@ -616,22 +616,8 @@\n us)%0A\n-    sres := %22%22\n %0A   \n@@ -655,54 +655,33 @@\n     \n-sres += string(res) + %22 %22%0A    %7D%0A%0A    print(sres)\n+fmt.Printf(%22%25d%22, res)%0A    %7D\n %0A%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-04_17-09-02",
+            "content": "@@ -680,18 +680,12 @@\n ing(\n-rune(\n res)\n-)\n  + %22\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-09-30",
+            "content": "@@ -708,13 +708,9 @@\n     \n-fmt.P\n+p\n rint\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-09-39",
+            "content": "@@ -714,14 +714,15 @@\n t.Print(\n+s\n res)%0A%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-09-53",
+            "content": "@@ -677,19 +677,31 @@\n string(r\n-es)\n+une(res)) + %22 %22\n %0A    %7D%0A%0A\n@@ -714,15 +714,14 @@\n t.Print(\n-s\n res)%0A%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-10-45",
+            "content": "@@ -608,24 +608,39 @@\n , vbus)%0A\n+    sres := %22%22%0A\n     for \n i, res :\n@@ -631,17 +631,17 @@\n     for \n-i\n+_\n , res :=\n@@ -665,74 +665,22 @@\n     \n-if i != 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Print\n+sres += string\n (res\n@@ -683,24 +683,25 @@\n (res)%0A    %7D%0A\n+%0A\n     fmt.Prin\n@@ -705,10 +705,12 @@\n rint\n-ln(\n+(sres\n )%0A%7D\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_17-14-56",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc matchingStrings (vcon []string, vbus []string) []int {\n    res := make([]int, len(vbus))\n    freq := make(map[string]int)\n\n    for _, str := range vcon {\n        freq[str]++\n    }\n\n    for i, str := range vbus {\n        res[i] = freq[str]\n    }\n\n    return res\n}\n\nfunc main() {\n    var ncon, nbus int\n    fmt.Scan(&ncon)\n    vcon := make([]string, ncon)\n    for i := 0; i < ncon; i++ {\n        fmt.Scan(&vcon[i])\n    }\n    \n    fmt.Scan(&nbus)\n    vbus := make([]string, nbus)\n    for i := 0; i < nbus; i++ {\n        fmt.Scan(&vbus[i])\n    }\n\n    res := matchingStrings(vcon, vbus)\n    for i, res := range res {\n        if i != 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(res)\n    }\n    fmt.Println()\n}",
+            "lines": "42"
+        }
+    ]
+}

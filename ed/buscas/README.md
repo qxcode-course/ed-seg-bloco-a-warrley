@@ -1,6 +1,6 @@
 # Buscas de strings
 
-![_](../../.tko/cache/ed/base/buscas/cover.jpg)
+![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/buscas/cover.jpg)
 
 Há um vetor de strings de entrada e um vetor de strings de consulta. Para cada sequência de consultas, determine quantas vezes ela ocorre na lista de sequências de entrada.
 
