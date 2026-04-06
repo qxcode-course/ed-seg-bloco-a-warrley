@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_06-21-10",
+            "content": "@@ -117,15 +117,16 @@\n vet)\n--1\n  == i\n+-1 \n %7B%0A%09%09\n@@ -155,77 +155,28 @@\n %09%7D%0A%09\n-sum := vet%5Bi%5D+vet%5Bi+1%5D%0A%09return append(%5B%5Dint%7Bsum%7D, sumngb(vet, i+1)...\n+return make(%5B%5Dint, 0\n )%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-06_06-26-43",
+            "content": "@@ -77,24 +77,31 @@\n umngb(vet %5B%5D\n+int, i \n int) %5B%5Dint %7B\n@@ -120,12 +120,12 @@\n )-1 \n-%3C= 1\n+== i\n %7B%0A%09%09\n@@ -165,15 +165,17 @@\n vet%5B\n-0\n+i\n %5D+vet%5B\n+i+\n 1%5D%0A%09\n@@ -214,12 +214,13 @@\n (vet\n-%5B1:%5D\n+, i+1\n )...\n@@ -392,16 +392,19 @@\n mngb(vet\n+, 0\n )%0A%09// 3.\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-04-06_06-32-32",
+            "content": "@@ -106,16 +106,18 @@\n len(vet)\n+-1\n  %3C= 1%7B%0A%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-04-06_06-32-55",
+            "content": "@@ -295,49 +295,8 @@\n 1 %7B%0A\n-%09%09fmt.Printf(%22%5B %25s %5D%5Cn%22, Join(vet, %22 %22))%0A\n %09%09re\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-04-06_06-37-27",
+            "content": "@@ -553,36 +553,14 @@\n rint\n-f(%22%5B %25s %5D%5Cn%22, Join(vet, %22 %22)\n+ln(vet\n )%0A%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-04-06_06-38-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc sumngb(vet []int) []int {\n\tif len(vet) <= 1{\n\t\treturn make([]int, 0)\n\t}\n\tsum := vet[0]+vet[1]\n\treturn append([]int{sum}, sumngb(vet[1:])...)\n}\n\nfunc processa(vet []int) {\n\t// 1. defina o ponto de parada\n\tif len(vet) == 1 {\n\t\tfmt.Printf(\"[ %s ]\\n\", Join(vet, \" \"))\n\t\treturn\n\t}\n\t// 2. monte o vetor auxiliar com os resultados das somas\n\tvetb := sumngb(vet)\n\t// 3. chame recursivamente a fun\u00e7\u00e3o processa para o vetor auxiliar\n\tprocessa(vetb)\n\t// 4. imprima o vetor original\n\tfmt.Printf(\"[ %s ]\\n\", Join(vet, \" \"))\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n",
+            "lines": "61"
+        }
+    ]
+}
