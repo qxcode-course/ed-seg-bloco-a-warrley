@@ -1,6 +1,6 @@
 # Escapando do labirinto
 
-![_](../../.tko/cache/ed/base/labirinto/cover.jpg)
+![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/labirinto/cover.jpg)
 
 Um labirinto perfeito é um labirinto no qual entre dois quaisquer pontos existe apenas um único caminho.
 

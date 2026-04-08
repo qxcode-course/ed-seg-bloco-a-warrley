@@ -227,7 +227,22 @@
         },
         {
             "label": "2026-04-07_19-11-44",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc drawTree(p *Pen, size float64) {\n\tif size < 2 {\n\t\treturn\n\t}\n\t\n\t// p.SavePNG(\"tree.png\")\n\t// var trash rune\n\t// fmt.Scanf(\"%c\", &trash)\n\t\n\tdegree := 35.0\n\n\tp.Walk(size)\n\tp.Right(degree)\n\tdrawTree(p, size*0.66)\n\n\tp.Left(2*degree)\n\tdrawTree(p, size*0.66)\n\n\tp.Right(degree)\n\tp.Walk(-size)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 1000) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.SetLineWidth(1)\n\n\tdrawTree(pen, 350)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -178,16 +178,19 @@\n n%0A%09%7D%0A%09%0A%09\n+// \n p.SavePN\n@@ -204,16 +204,19 @@\n .png%22)%0A%09\n+// \n var tras\n@@ -223,16 +223,19 @@\n h rune%0A%09\n+// \n fmt.Scan\n@@ -303,12 +303,8 @@\n ree)\n-%09%09%09%09\n %0A%09dr\n@@ -810,8 +810,9 @@\n lly.%22)%0A%7D\n+%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-07_19-50-08",
+            "content": "@@ -159,18 +159,17 @@\n  size %3C \n-50\n+2\n  %7B%0A%09%09ret\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-07_19-50-24",
+            "content": "@@ -159,17 +159,18 @@\n  size %3C \n-2\n+50\n  %7B%0A%09%09ret\n@@ -183,12 +183,8 @@\n %0A%09%0A%09\n-/// \n p.Sa\n@@ -202,19 +202,16 @@\n .png%22)%0A%09\n-// \n var tras\n@@ -218,19 +218,16 @@\n h rune%0A%09\n-// \n fmt.Scan\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-07_19-56-38",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc drawTree(p *Pen, size float64) {\n\tif size < 2 {\n\t\treturn\n\t}\n\t\n\t/// p.SavePNG(\"tree.png\")\n\t// var trash rune\n\t// fmt.Scanf(\"%c\", &trash)\n\t\n\tdegree := 35.0\n\n\tp.Walk(size)\n\tp.Right(degree)\t\t\t\t\n\tdrawTree(p, size*0.66)\n\n\tp.Left(2*degree)\n\tdrawTree(p, size*0.66)\n\n\tp.Right(degree)\n\tp.Walk(-size)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 1000) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.SetLineWidth(1)\n\n\tdrawTree(pen, 350)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}",
             "lines": "45"
         }
     ]
