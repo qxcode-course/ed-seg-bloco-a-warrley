@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+func drawIce(p *Pen, size float64) {
+	if size < 1 {
+		return
+	}
+
+	for range(5) {
+		// p.SavePNG("ice.png")
+		// var c rune
+		// fmt.Scanf("%c", &c)
+
+		p.Walk(size)
+		drawIce(p, size/3)
+		p.Walk(-size)
+		p.Right(72)
+
+	}
+}
+
+func main() {
+	pen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura
+	pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho
+	pen.SetPosition(500, 500) // move o pincel para x 250, y 500
+	pen.SetLineWidth(1)
+	pen.SetHeading(270)
+
+	drawIce(pen, 350)
+
+	pen.SavePNG("ice.png")
+	fmt.Println("PNG file created successfully.")
+}
