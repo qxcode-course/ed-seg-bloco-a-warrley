@@ -1,0 +1,54 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+
+func drawSquat(p *Pen, size float64) {
+	if size < 2 {
+		return 
+	}
+
+	p.Up()
+	p.Left(45)
+	dist := size/2*math.Sqrt2
+	p.Walk(dist)
+	p.Right(45)
+
+	for range(4) {
+		// p.SavePNG("square.png")
+		// var c rune
+		// fmt.Scanf("%c", &c)
+		drawSquat(p, size*0.45)
+
+		p.Down()
+		p.Right(90)
+		p.Walk(size)
+		p.Up()
+	}
+
+	p.Left(45)
+	p.Walk(-dist)
+	p.Right(45)
+
+}
+
+func main() {
+	pen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura
+	pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho
+	pen.SetPosition(500, 500) // move o pincel para x 250, y 500
+	pen.SetLineWidth(1)
+	pen.SetHeading(90)
+
+	drawSquat(pen, 500)	
+
+	pen.SavePNG("square.png")
+	fmt.Println("PNG file created successfully.")
+}
