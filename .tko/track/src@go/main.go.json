@@ -242,8 +242,188 @@
         },
         {
             "label": "2026-04-07_19-56-38",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc drawTree(p *Pen, size float64) {\n\tif size < 2 {\n\t\treturn\n\t}\n\t\n\t/// p.SavePNG(\"tree.png\")\n\t// var trash rune\n\t// fmt.Scanf(\"%c\", &trash)\n\t\n\tdegree := 35.0\n\n\tp.Walk(size)\n\tp.Right(degree)\t\t\t\t\n\tdrawTree(p, size*0.66)\n\n\tp.Left(2*degree)\n\tdrawTree(p, size*0.66)\n\n\tp.Right(degree)\n\tp.Walk(-size)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 1000) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.SetLineWidth(1)\n\n\tdrawTree(pen, 350)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}",
+            "content": "@@ -119,23 +119,20 @@\n unc draw\n-Circles\n+Tree\n (p *Pen,\n@@ -153,21 +153,258 @@\n  %7B%0A%09\n-p.DrawCircle(\n+if size %3C 2 %7B%0A%09%09return%0A%09%7D%0A%09%0A%09/// p.SavePNG(%22tree.png%22)%0A%09// var trash rune%0A%09// fmt.Scanf(%22%25c%22, &trash)%0A%09%0A%09degree := 35.0%0A%0A%09p.Walk(size)%0A%09p.Right(degree)%09%09%09%09%0A%09drawTree(p, size*0.66)%0A%0A%09p.Left(2*degree)%0A%09drawTree(p, size*0.66)%0A%0A%09p.Right(degree)%0A%09p.Walk(-\n size\n@@ -730,27 +730,23 @@\n draw\n-Circles\n+Tree\n (pen, 3\n-0\n+5\n 0)%0A\n-%09\n %0A%09pe\n@@ -760,15 +760,12 @@\n NG(%22\n-circles\n+tree\n .png\n",
             "lines": "45"
+        },
+        {
+            "label": "2026-04-12_14-53-35",
+            "content": "@@ -358,17 +358,18 @@\n on(500, \n-5\n+10\n 00) // m\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-12_14-54-44",
+            "content": "@@ -504,17 +504,17 @@\n es(pen, \n-5\n+3\n 00)%0A%09%0A%09p\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-12_14-56-43",
+            "content": "@@ -508,9 +508,9 @@\n en, \n-3\n+5\n 00)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-12_14-56-50",
+            "content": "@@ -174,95 +174,8 @@\n ize)\n-%0A%0A%09p.SavePNG(%22circles.png%22)%0A%09var c rune%0A%09fmt.Scanf(%22%25c%22,&c)%0A%0A%09p.Left(120)%0A%09p.Walk(size)\n %0A%7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-12_14-58-24",
+            "content": "@@ -232,19 +232,16 @@\n %22,&c)%0A%0A%09\n-// \n p.Left(1\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_15-00-03",
+            "content": "@@ -264,43 +264,8 @@\n ize)\n-%0A%0A%09for range(6) %7B%0A%09%09p.Walk(size)%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_15-00-47",
+            "content": "@@ -176,45 +176,8 @@\n e)%0A%0A\n-%09%0A%09// p.Left(120)%0A%09%0A%09for range(6) %7B%0A%09\n %09p.S\n@@ -198,17 +198,16 @@\n s.png%22)%0A\n-%09\n %09var c r\n@@ -210,17 +210,16 @@\n  c rune%0A\n-%09\n %09fmt.Sca\n@@ -234,20 +234,55 @@\n &c)%0A\n-%09%09\n+%0A%09// \n p.Left(\n-60)\n+120)%0A%09p.Walk(size)%0A%0A%09for range(6) %7B\n %0A%09%09p\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_15-05-38",
+            "content": "@@ -175,27 +175,29 @@\n ze)%0A%0A%09%0A%09\n-p.Walk(size\n+// p.Left(120\n )%0A%09%0A%09for\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_15-10-04",
+            "content": "@@ -275,12 +275,11 @@\n %09%09p.\n-Righ\n+Lef\n t(60\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_15-10-15",
+            "content": "@@ -281,10 +281,9 @@\n ght(\n-12\n+6\n 0)%0A%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_15-11-04",
+            "content": "@@ -192,22 +192,8 @@\n ze)%0A\n-%09p.Right(120)%0A\n %09%0A%09f\n@@ -277,17 +277,18 @@\n p.Right(\n-6\n+12\n 0)%0A%09%09p.W\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_15-11-27",
+            "content": "@@ -189,19 +189,16 @@\n (size)%0A%09\n-// \n p.Right(\n@@ -281,17 +281,16 @@\n %25c%22,&c)%0A\n-%0A\n %09%09p.Righ\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_15-12-06",
+            "content": "@@ -189,16 +189,19 @@\n (size)%0A%09\n+// \n p.Right(\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_15-12-21",
+            "content": "@@ -290,31 +290,31 @@\n %09%09p.\n-Walk(size)%0A%09%09p.Right(60\n+Right(60)%0A%09%09p.Walk(size\n )%0A%09%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_15-12-36",
+            "content": "@@ -155,37 +155,8 @@\n ) %7B%0A\n-%09if size %3C 10 %7B%0A%09%09return%0A%09%7D%0A%0A\n %09p.D\n@@ -281,18 +281,16 @@\n %25c%22,&c)%0A\n-%09%09\n %0A%09%09p.Wal\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_15-13-48",
+            "content": "@@ -316,30 +316,8 @@\n )%0A%09%09\n-drawCircles(p, size/3)\n %0A%09%09p\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-12_15-14-25",
+            "content": "@@ -251,19 +251,16 @@\n (6) %7B%0A%09%09\n-// \n p.SavePN\n@@ -278,19 +278,16 @@\n png%22)%0A%09%09\n-// \n var c ru\n@@ -291,19 +291,16 @@\n  rune%0A%09%09\n-// \n fmt.Scan\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-12_15-14-51",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-5\n+1\n 0 %7B%0A%09%09re\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-12_15-15-51",
+            "content": "@@ -319,16 +319,41 @@\n %25c%22,&c)%0A\n+%09%09drawCircles(p, size/3)%0A\n %09%09p.Walk\n@@ -604,19 +604,16 @@\n  y 500%0A%09\n-// \n pen.SetH\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-12_15-16-30",
+            "content": "@@ -251,16 +251,19 @@\n (6) %7B%0A%09%09\n+// \n p.SavePN\n@@ -281,16 +281,19 @@\n png%22)%0A%09%09\n+// \n var c ru\n@@ -297,16 +297,19 @@\n  rune%0A%09%09\n+// \n fmt.Scan\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-12_15-17-17",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-4\n+5\n 0 %7B%0A%09%09re\n@@ -328,53 +328,8 @@\n ize)\n-%0A%0A%09%09drawCircles(p, size/3)%0A%09%09%0A%09%09p.Walk(-size)\n %0A%09%09p\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-12_15-20-22",
+            "content": "@@ -351,16 +351,34 @@\n size/3)%0A\n+%09%09%0A%09%09p.Walk(-size)\n %0A%09%09p.Rig\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-12_15-20-51",
+            "content": "@@ -183,70 +183,8 @@\n %0A%09%7D%0A\n-%09%0A%09p.SavePNG(%22circles.png%22)%0A%09var c rune%0A%09fmt.Scanf(%22%25c%22,&c)%0A%0A%09\n %0A%09p.\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-12_15-21-16",
+            "content": "@@ -240,16 +240,17 @@\n c%22,&c)%0A%0A\n+%09\n %0A%09p.Draw\n@@ -372,16 +372,32 @@\n %25c%22,&c)%0A\n+%09%09p.Walk(size)%0A%0A\n %09%09drawCi\n@@ -417,25 +417,8 @@\n /3)%0A\n-%09%09%0A%09%09p.Walk(size)\n %0A%09%09p\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-12_15-22-08",
+            "content": "@@ -396,16 +396,18 @@\n size/3)%0A\n+%09%09\n %0A%09%09p.Wal\n@@ -434,37 +434,8 @@\n )%0A%09%7D\n-%0A%0A%09p.Left(120)%0A%09p.Walk(-size)\n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-12_15-24-15",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-1\n+4\n 0 %7B%0A%09%09re\n@@ -182,19 +182,16 @@\n n%0A%09%7D%0A%09%0A%09\n-// \n p.SavePN\n@@ -208,19 +208,16 @@\n .png%22)%0A%09\n-// \n var c ru\n@@ -220,19 +220,16 @@\n c rune%0A%09\n-// \n fmt.Scan\n@@ -312,19 +312,16 @@\n (6) %7B%0A%09%09\n-// \n p.SavePN\n@@ -339,19 +339,16 @@\n png%22)%0A%09%09\n-// \n var c ru\n@@ -352,19 +352,16 @@\n  rune%0A%09%09\n-// \n fmt.Scan\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-25-40",
+            "content": "@@ -162,17 +162,18 @@\n  size %3C \n-3\n+10\n  %7B%0A%09%09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-25-50",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-4\n+3\n  %7B%0A%09%09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-26-52",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-3\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-27-02",
+            "content": "@@ -163,17 +163,16 @@\n size %3C 3\n-0\n  %7B%0A%09%09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-28-10",
+            "content": "@@ -162,17 +162,17 @@\n  size %3C \n-4\n+3\n 0 %7B%0A%09%09re\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-28-16",
+            "content": "@@ -182,16 +182,19 @@\n n%0A%09%7D%0A%09%0A%09\n+// \n p.SavePN\n@@ -211,16 +211,19 @@\n .png%22)%0A%09\n+// \n var c ru\n@@ -226,16 +226,19 @@\n c rune%0A%09\n+// \n fmt.Scan\n@@ -321,16 +321,19 @@\n (6) %7B%0A%09%09\n+// \n p.SavePN\n@@ -351,16 +351,19 @@\n png%22)%0A%09%09\n+// \n var c ru\n@@ -367,16 +367,19 @@\n  rune%0A%09%09\n+// \n fmt.Scan\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-28-41",
+            "content": "@@ -162,17 +162,18 @@\n  size %3C \n-3\n+40\n  %7B%0A%09%09ret\n@@ -180,19 +180,18 @@\n urn%0A%09%7D%0A%09\n-// \n+%0A%09\n p.SavePN\n@@ -208,19 +208,16 @@\n .png%22)%0A%09\n-// \n var c ru\n@@ -220,19 +220,16 @@\n c rune%0A%09\n-// \n fmt.Scan\n@@ -239,16 +239,18 @@\n %25c%22,&c)%0A\n+%0A%0A\n %09p.DrawC\n@@ -263,22 +263,16 @@\n size)%0A%0A%09\n-p.Up()\n %0A%09p.Walk\n@@ -292,26 +292,16 @@\n ht(120)%0A\n-%09p.Down()%0A\n %09%0A%09for r\n@@ -434,16 +434,8 @@\n %09%7D%0A%0A\n-%09p.Up()%0A\n %09p.L\n@@ -443,16 +443,16 @@\n ft(120)%0A\n+\n %09p.Walk(\n@@ -462,18 +462,8 @@\n ze)%0A\n-%09p.Down()%0A\n %7D%0A%0Af\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-30-20",
+            "content": "@@ -332,19 +332,16 @@\n (6) %7B%0A%09%09\n-// \n p.SavePN\n@@ -359,19 +359,16 @@\n png%22)%0A%09%09\n-// \n var c ru\n@@ -372,19 +372,16 @@\n  rune%0A%09%09\n-// \n fmt.Scan\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-30-35",
+            "content": "@@ -430,17 +430,8 @@\n 3)%0A%0A\n-%09%09p.Up()%0A\n %09%09p.\n@@ -459,19 +459,8 @@\n 60)%0A\n-%09%09p.Down()%0A\n %09%7D%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-12_15-32-02",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc drawCircles(p *Pen, size float64) {\n\tif size < 3 {\n\t\treturn\n\t}\n\t// p.SavePNG(\"circles.png\")\n\t// var c rune\n\t// fmt.Scanf(\"%c\",&c)\n\tp.DrawCircle(size)\n\n\tp.Up()\n\tp.Walk(size)\n\tp.Right(120)\n\tp.Down()\n\t\n\tfor range(6) {\n\t\t// p.SavePNG(\"circles.png\")\n\t\t// var c rune\n\t\t// fmt.Scanf(\"%c\",&c)\n\t\tdrawCircles(p, size/3)\n\n\t\tp.Up()\n\t\tp.Walk(size)\n\t\tp.Right(60)\n\t\tp.Down()\n\t}\n\n\tp.Up()\n\tp.Left(120)\n\tp.Walk(-size)\n\tp.Down()\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 500) // move o pincel para x 250, y 500\n\t// pen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.SetLineWidth(1)\n\n\tdrawCircles(pen, 300)\n\t\n\tpen.SavePNG(\"circles.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}",
+            "lines": "55"
         }
     ]
 }
