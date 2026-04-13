@@ -14,12 +14,20 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+- name: eval1
+  target: https://github.com/senapk/eval_26_ed_1
+  index: README.md
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
+expanded:
+- eval1@teste-1
 flags:
   inbox: all
   panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
-lang: py
-selected: ed@rec
+lang: go
+selected: eval1@baruel

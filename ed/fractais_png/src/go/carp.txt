@@ -1,0 +1,47 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+func (p *Pen) walkToHip(size float64) {
+	p.Up()
+	p.Left(135)
+	hip := size*math.Sqrt2
+	p.Walk(hip)
+	p.Right(135)
+	p.Down()
+}
+
+func (p *Pen) drawCarp(size float64) {
+	if size < 10 {
+		return 
+	}
+	
+	p.walkToHip(size/4)
+	p.FillSquare(size, size)
+
+	// p.drawCarp(size/3)
+} 
+
+func main() {
+	pen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura
+	pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho
+	pen.SetPosition(500, 500) // move o pincel para x 250, y 500
+	pen.SetLineWidth(1)
+	pen.SetRGB(0,0,0)
+
+	pen.walkToHip(350/2)
+	pen.FillSquare(350, 350)
+
+	pen.drawCarp(350/3)
+
+	pen.SavePNG("carp.png")
+	fmt.Println("PNG file created successfully.")
+}

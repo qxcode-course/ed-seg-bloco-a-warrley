@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_17-13-03",
+            "content": "@@ -122,19 +122,16 @@\n de)%0A%0A   \n- //\n  figurin\n@@ -164,19 +164,16 @@\n ade)%0A   \n- //\n  for i :\n@@ -203,19 +203,16 @@\n ++ %7B%0A   \n- //\n      fmt\n@@ -240,11 +240,8 @@\n %0A   \n- //\n  %7D%0A%0A\n@@ -277,12 +277,24 @@\n antidade\n+, figurinhas\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_17-13-18",
+            "content": "@@ -106,17 +106,16 @@\n _total, \n-&\n quantida\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_17-13-34",
+            "content": "@@ -87,17 +87,16 @@\n canf(%22%25d\n- \n %25d%22, &al\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_17-13-41",
+            "content": "@@ -83,24 +83,27 @@\n mt.Scanf(%22%25d\n+ %25d\n %22, &album_to\n@@ -109,28 +109,8 @@\n otal\n-)%0A    fmt.Scanf(%22%25d%22\n , &q\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_17-14-05",
+            "content": "@@ -141,16 +141,19 @@\n de)%0A%0A   \n+ //\n  figurin\n@@ -186,16 +186,19 @@\n ade)%0A   \n+ //\n  for i :\n@@ -228,16 +228,19 @@\n ++ %7B%0A   \n+ //\n      fmt\n@@ -264,16 +264,19 @@\n %5Bi%5D)%0A   \n+ //\n  %7D%0A%0A    \n@@ -312,20 +312,8 @@\n dade\n-, figurinhas\n )%0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-13_17-14-14",
+            "content": "@@ -200,26 +200,27 @@\n  0; i %3C \n-quantidade\n+album_total\n ; i++ %7B%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-13_17-14-30",
+            "content": "@@ -146,35 +146,45 @@\n     \n-count := make(map%5Bint%5Dint)%0A\n+figurinhas := make(%5B%5Dint, quantidade)\n %0A   \n@@ -230,67 +230,32 @@\n     \n-value := 0%0A        fmt.Scan(&value)%0A%0A        count%5Bvalue%5D++\n+fmt.Scan(&figurinhas%5Bi%5D)\n %0A   \n@@ -301,13 +301,18 @@\n de, \n-count\n+figurinhas\n )%0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-13_17-18-47",
+            "content": "@@ -172,36 +172,8 @@\n int)\n-%0A    repeated := make(%5B%5Dint)\n %0A%0A  \n@@ -279,50 +279,8 @@\n e%5D++\n-%0A%0A        if count%5Bvalue%5D %3E 1 %7B%0A%0A        %7D\n %0A   \n@@ -331,18 +331,8 @@\n ount\n-, repeated\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_17-20-51",
+            "content": "@@ -195,19 +195,16 @@\n ke(%5B%5Dint\n-, 0\n )%0A%0A    f\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-13_17-21-12",
+            "content": "@@ -342,54 +342,8 @@\n 1 %7B%0A\n-            repeated = append(repeated, value)\n %0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-13_17-21-38",
+            "content": "@@ -406,221 +406,8 @@\n  %7D%0A%0A\n-    if len(repeated) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i, v := range repeated %7B%0A            if i %3E 0 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(v)%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-13_17-25-07",
+            "content": "@@ -612,30 +612,8 @@\n   %7D%0A\n-        fmt.Println()%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_17-25-18",
+            "content": "@@ -644,120 +644,8 @@\n %0A   \n- for i := 1; i %3C= album_total; i++ %7B%0A        if count%5Bi%5D == 0 %7B%0A            fmt.Print(i)%0A        %7D%0A    %7D%0A%0A    //\n  fmt\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_17-27-37",
+            "content": "@@ -748,26 +748,8 @@\n    %7D\n-%0A    fmt.Println()\n %0A%0A  \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_17-27-48",
+            "content": "@@ -681,65 +681,8 @@\n + %7B%0A\n-        if i != 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_17-28-11",
+            "content": "@@ -693,17 +693,17 @@\n if i != \n-1\n+0\n  %7B%0A     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_17-28-25",
+            "content": "@@ -684,19 +684,16 @@\n %0A       \n- //\n  if i !=\n@@ -709,15 +709,12 @@\n     \n-//\n     \n- \n fmt.\n@@ -731,19 +731,16 @@\n %0A       \n- //\n  %7D%0A     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_17-28-30",
+            "content": "@@ -680,24 +680,27 @@\n ++ %7B%0A       \n+ //\n  if i != 1 %7B\n@@ -700,36 +700,39 @@\n  != 1 %7B%0A        \n+//\n     \n+ \n fmt.Print(%22 %22)%0A \n@@ -729,32 +729,35 @@\n int(%22 %22)%0A       \n+ //\n  %7D%0A        if co\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_17-28-47",
+            "content": "package main\n\nimport \"fmt\"\nfunc main() {\n    album_total, quantidade := 0, 0\n    fmt.Scanf(\"%d\", &album_total)\n    fmt.Scanf(\"%d\", &quantidade)\n\n    count := make(map[int]int)\n    repeated := make([]int, 0)\n\n    for i := 0; i < quantidade; i++ {\n        value := 0\n        fmt.Scan(&value)\n\n        count[value]++\n\n        if count[value] > 1 {\n            repeated = append(repeated, value)\n        }\n    }\n\n    if len(repeated) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, v := range repeated {\n            if i > 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Print(v)\n        }\n        fmt.Println()\n    }\n\n    for i := 1; i <= album_total; i++ {\n        if i != 1 {\n            fmt.Print(\" \")\n        }\n        if count[i] == 0 {\n            fmt.Print(i)\n        }\n    }\n    fmt.Println()\n\n    // fmt.Print(album_total, quantidade, count, repeated)\n}\n",
+            "lines": "46"
+        }
+    ]
+}

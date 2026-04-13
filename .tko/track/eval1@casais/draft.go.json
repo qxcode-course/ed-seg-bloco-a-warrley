@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-40-22",
+            "content": "@@ -135,17 +135,16 @@\n mt.Scan(\n-&\n vet%5Bi%5D)%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_16-40-47",
+            "content": "@@ -70,44 +70,8 @@\n %0A   \n- single := make(map%5Bint%5Dint)%0A%0A    //\n  vet\n@@ -130,67 +130,25 @@\n     \n-value := 0%0A        fmt.Scan(&value)%0A        single%5Bvalue%5D++\n+fmt.Scan(&vet%5Bi%5D)\n %0A   \n@@ -169,14 +169,11 @@\n int(\n-single\n+vet\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-13_16-48-08",
+            "content": "@@ -67,34 +67,8 @@\n n)%0A%0A\n-    vet := make(%5B%5Dint, n)%0A\n     \n@@ -96,16 +96,45 @@\n t%5Dint)%0A%0A\n+    // vet := make(%5B%5Dint, n)%0A\n     for \n@@ -202,31 +202,8 @@\n ue)%0A\n-        vet%5Bi%5D = value%0A\n     \n@@ -228,20 +228,16 @@\n +%0A    %7D%0A\n-    \n %0A    fmt\n@@ -247,13 +247,8 @@\n int(\n-vet, \n sing\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-13_16-59-16",
+            "content": "@@ -93,23 +93,22 @@\n  n)%0A    \n-coup\n+sing\n le\n-s\n  := make\n@@ -230,161 +230,24 @@\n     \n-couples%5Bvalue%5D++%0A    %7D%0A    %0A    count := 0%0A    for i := 0; i %3C n; i++ %7B%0A        value := vet%5Bi%5D%0A        if couples%5Bvalue%5D == 2 %7B%0A            count++%0A    \n+single%5Bvalue%5D++%0A\n     \n@@ -252,18 +252,16 @@\n   %7D%0A    \n-%7D%0A\n %0A    fmt\n@@ -282,15 +282,8 @@\n ngle\n-, count\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_17-01-05",
+            "content": "@@ -412,23 +412,22 @@\n nt(vet, \n-coup\n+sing\n le\n-s\n , count)\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_17-01-14",
+            "content": "@@ -90,20 +90,19 @@\n nt, \n-50\n+n\n )%0A    \n-sing\n+coup\n les \n@@ -208,63 +208,22 @@\n     \n-if singles%5B-value%5D == 1 %7B%0A            singles%5B-\n+vet%5Bi%5D = \n value\n-%5D--\n %0A   \n@@ -231,33 +231,12 @@\n     \n-%7D else %7B%0A            sing\n+coup\n les%5B\n@@ -244,26 +244,16 @@\n alue%5D++%0A\n-        %7D%0A\n     %7D%0A  \n@@ -334,20 +334,20 @@\n      if \n-sing\n+coup\n les%5Bvalu\n@@ -416,15 +416,22 @@\n et, \n-singles\n+couples, count\n )%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_17-07-20",
+            "content": "@@ -84,16 +84,20 @@\n ke(%5B%5Dint\n+, 50\n )%0A    si\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_17-07-48",
+            "content": "@@ -88,11 +88,8 @@\n %5Dint\n-, n\n )%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_17-07-57",
+            "content": "@@ -127,23 +127,8 @@\n t)%0A%0A\n-    count := 0%0A\n     \n@@ -144,32 +144,32 @@\n 0; i %3C n; i++ %7B%0A\n+\n         value :=\n@@ -260,36 +260,16 @@\n alue%5D--%0A\n-            count++%0A\n         \n@@ -327,16 +327,31 @@\n  %7D%0A    %0A\n+    count := 0%0A\n     for \n@@ -465,16 +465,16 @@\n %0A    %7D%0A%0A\n+\n     fmt.\n@@ -495,15 +495,8 @@\n gles\n-, count\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_17-08-30",
+            "content": "@@ -499,16 +499,30 @@\n t.Print(\n+vet, singles, \n count)%0A%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_17-09-04",
+            "content": "@@ -502,10 +502,8 @@\n rint\n-ln\n (cou\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_17-09-09",
+            "content": "@@ -242,16 +242,12 @@\n ue%5D \n-%25 2 != 0\n+== 1\n  %7B%0A \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_17-09-42",
+            "content": "package main\n\nimport \"fmt\"\nfunc main() {\n    n := 0\n    fmt.Scan(&n)\n\n    vet := make([]int, n)\n    singles := make(map[int]int)\n\n    count := 0\n    for i := 0; i < n; i++ {\n        value := 0\n        fmt.Scan(&value)\n        if singles[-value] % 2 != 0 {\n            singles[-value]--\n            count++\n        } else {\n            singles[value]++\n        }\n    }\n    \n    for i := 0; i < n; i++ {\n        value := vet[i]\n        if singles[value] == 2 {\n            count++\n        }\n    }\n\n    fmt.Println(count)\n}\n",
+            "lines": "31"
+        }
+    ]
+}
