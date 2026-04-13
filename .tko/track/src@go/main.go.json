@@ -907,8 +907,68 @@
         },
         {
             "label": "2026-04-12_17-18-40",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\n\nfunc drawSquat(p *Pen, size float64) {\n\tif size < 2 {\n\t\treturn \n\t}\n\n\tp.Up()\n\tp.Left(45)\n\tdist := size/2*math.Sqrt2\n\tp.Walk(dist)\n\tp.Right(45)\n\n\tfor range(4) {\n\t\t// p.SavePNG(\"square.png\")\n\t\t// var c rune\n\t\t// fmt.Scanf(\"%c\", &c)\n\t\tdrawSquat(p, size*0.45)\n\n\t\tp.Down()\n\t\tp.Right(90)\n\t\tp.Walk(size)\n\t\tp.Up()\n\t}\n\n\tp.Left(45)\n\tp.Walk(-dist)\n\tp.Right(45)\n\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 500) // move o pincel para x 250, y 500\n\tpen.SetLineWidth(1)\n\tpen.SetHeading(90)\n\n\tdrawSquat(pen, 500)\t\n\n\tpen.SavePNG(\"square.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}",
+            "content": "@@ -23,16 +23,24 @@\n %0A%09%22fmt%22%0A\n+%09%22math%22%0A\n %09%22math/r\n@@ -118,16 +118,17 @@\n n+1)%0A%7D%0A%0A\n+%0A\n func dra\n@@ -128,18 +128,20 @@\n unc draw\n-Ro\n+Squa\n t(p *Pen\n@@ -173,10 +173,9 @@\n e %3C \n-30\n+2\n  %7B%0A%09\n@@ -187,24 +187,71 @@\n rn %0A%09%7D%0A%0A\n+%09p.Up()%0A%09p.Left(45)%0A%09dist := size/2*math.Sqrt2%0A\n %09p.Walk(\n size)%0A%09p\n@@ -242,20 +242,20 @@\n %09p.Walk(\n-size\n+dist\n )%0A%09p.Rig\n@@ -261,19 +261,109 @@\n ght(\n-90)%0A%09drawRo\n+45)%0A%0A%09for range(4) %7B%0A%09%09// p.SavePNG(%22square.png%22)%0A%09%09// var c rune%0A%09%09// fmt.Scanf(%22%25c%22, &c)%0A%09%09drawSqua\n t(p,\n@@ -371,33 +371,50 @@\n size\n-/10)%0A%09p.Lef\n+*0.45)%0A%0A%09%09p.Down()%0A%09%09p.Righ\n t(90)%0A\n+%09\n %09p.Walk(\n -siz\n@@ -413,17 +413,69 @@\n alk(\n--\n size)%0A\n+%09%09p.Up()%0A%09%7D%0A%0A%09p.Left(45)%0A%09p.Walk(-dist)%0A%09p.Right(45)%0A%0A\n %7D\n- \n %0A%0Afu\n@@ -720,28 +720,51 @@\n h(1)\n+%0A%09pen.SetHeading(90)\n %0A%0A%09draw\n-Ro\n+Squa\n t(pen, \n-8\n+5\n 00)\n+%09\n %0A%0A%09p\n@@ -779,11 +779,14 @@\n NG(%22\n-rot\n+square\n .png\n",
             "lines": "54"
+        },
+        {
+            "label": "2026-04-13_05-42-14",
+            "content": "@@ -439,14 +439,14 @@\n ion(\n-1\n+5\n 00, \n-1\n+5\n 00) \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_05-43-01",
+            "content": "@@ -224,12 +224,11 @@\n size\n-*0.9\n+/10\n )%0A%09p\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_05-43-26",
+            "content": "@@ -224,17 +224,16 @@\n size*0.9\n-8\n )%0A%09p.Lef\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_05-43-37",
+            "content": "@@ -158,17 +158,17 @@\n  size %3C \n-1\n+3\n 0 %7B%0A%09%09re\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_05-43-49",
+            "content": "@@ -119,25 +119,16 @@\n unc \n-(p *Pen) \n drawRot(\n size\n@@ -119,24 +119,32 @@\n unc drawRot(\n+p *Pen, \n size float64\n@@ -160,12 +160,11 @@\n ize \n-%3E 80\n+%3C 1\n 0 %7B%0A\n@@ -198,28 +198,27 @@\n %0A%09p.\n-Lef\n+Righ\n t(90)%0A%09\n-p.\n drawRot(\n size\n@@ -217,25 +217,28 @@\n Rot(\n+p, \n size*\n-1.1\n+0.98\n )%0A%09p.\n-Righ\n+Lef\n t(90\n@@ -441,14 +441,14 @@\n ion(\n-5\n+1\n 00, \n-5\n+1\n 00) \n@@ -507,43 +507,18 @@\n (1)%0A\n+%0A\n %09\n-pen.SetHeading(270)%0A%0A%09pen.\n drawRot(\n 20)%0A\n@@ -513,17 +513,23 @@\n drawRot(\n-2\n+pen, 80\n 0)%0A%0A%09pen\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_05-46-36",
+            "content": "@@ -538,17 +538,17 @@\n drawRot(\n-1\n+2\n 0)%0A%0A%09pen\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_05-46-53",
+            "content": "@@ -538,17 +538,17 @@\n drawRot(\n-2\n+1\n 0)%0A%0A%09pen\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_05-47-03",
+            "content": "@@ -542,10 +542,10 @@\n Rot(\n-15\n+20\n )%0A%0A%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_05-47-11",
+            "content": "@@ -224,11 +224,12 @@\n size\n-+10\n+*1.1\n )%0A%09p\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_05-55-32",
+            "content": "@@ -164,9 +164,9 @@\n  %3E 8\n-3\n+0\n 0 %7B%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_06-00-10",
+            "content": "@@ -160,17 +160,17 @@\n size %3E 8\n-1\n+3\n 0 %7B%0A%09%09re\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_06-00-16",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc (p *Pen) drawRot(size float64) {\n\tif size > 810 {\n\t\treturn \n\t}\n\n\tp.Walk(size)\n\tp.Left(90)\n\tp.drawRot(size+10)\n\tp.Right(90)\n\tp.Walk(-size)\n} \n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 500) // move o pincel para x 250, y 500\n\tpen.SetLineWidth(1)\n\tpen.SetHeading(270)\n\n\tpen.drawRot(15)\n\n\tpen.SavePNG(\"rot.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}",
+            "lines": "35"
         }
     ]
 }
