@@ -1352,8 +1352,108 @@
         },
         {
             "label": "2026-04-13_11-50-44",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc (p *Pen) walkToHip(size float64) {\n\tp.Up()\n\tp.Left(135)\n\thip := size*math.Sqrt2\n\tp.Walk(hip)\n\tp.Right(135)\n\tp.Down()\n}\n\nfunc (p *Pen) drawCarp(size float64) {\n\tif size < 10 {\n\t\treturn \n\t}\n\t\n\tp.walkToHip(size/4)\n\tp.FillSquare(size, size)\n\n\t// p.drawCarp(size/3)\n} \n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 500) // move o pincel para x 250, y 500\n\tpen.SetLineWidth(1)\n\tpen.SetRGB(0,0,0)\n\n\tpen.walkToHip(350/2)\n\tpen.FillSquare(350, 350)\n\n\tpen.drawCarp(350/3)\n\n\tpen.SavePNG(\"carp.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -23,16 +23,24 @@\n %0A%09%22fmt%22%0A\n+%09%22math%22%0A\n %09%22math/r\n@@ -136,52 +136,262 @@\n en) \n-drawWeizen(size float64) %7B%0A\n+walkToHip(size float64) %7B%0A%09p.Up()%0A%09p.Left(135)%0A%09hip := size*math.Sqrt2%0A%09p.Walk(hip)%0A%09p.Right(135)%0A%09p.Down()%0A%7D%0A%0Afunc (p *Pen) drawCarp(size float64) %7B%0A%09if size %3C 10 %7B%0A%09%09return %0A%09%7D%0A%09\n %0A%09p.\n-Walk(size)%0A\n+walkToHip(size/4)%0A%09p.FillSquare(size, size)%0A%0A%09// p.drawCarp(size/3)\n %0A%7D\n+ \n %0A%0Afu\n@@ -656,25 +656,54 @@\n ,0)%0A\n+%0A\n %09pen.\n-SetHeading(9\n+walkToHip(350/2)%0A%09pen.FillSquare(350, 35\n 0)%0A%0A\n@@ -715,18 +715,18 @@\n draw\n-Weizen(100\n+Carp(350/3\n )%0A%0A%09\n",
             "lines": "47"
+        },
+        {
+            "label": "2026-04-14_05-37-08",
+            "content": "@@ -495,14 +495,12 @@\n NG(%22\n-weizen\n+carp\n .png\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_05-37-22",
+            "content": "@@ -416,19 +416,16 @@\n dth(1)%0A%09\n-// \n pen.SetR\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_05-37-43",
+            "content": "@@ -267,16 +267,81 @@\n  altura%0A\n+%09pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho%0A\n %09pen.Set\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_05-37-51",
+            "content": "@@ -351,16 +351,19 @@\n dth(1)%0A%09\n+// \n pen.SetR\n@@ -369,21 +369,13 @@\n RGB(\n-255, 255, 255\n+0,0,0\n )%0A%09p\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-38-40",
+            "content": "@@ -352,10 +352,8 @@\n th(1\n-.2\n )%0A%09p\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-38-50",
+            "content": "@@ -420,9 +420,9 @@\n zen(\n-3\n+1\n 00)%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-38-59",
+            "content": "@@ -285,26 +285,25 @@\n sition(500, \n-10\n+5\n 00) // move \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-39-14",
+            "content": "@@ -348,16 +348,18 @@\n neWidth(\n+1.\n 2)%0A%09pen.\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-39-25",
+            "content": "@@ -352,11 +352,9 @@\n dth(\n-1.5\n+2\n )%0A%09p\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-39-33",
+            "content": "@@ -289,17 +289,18 @@\n on(500, \n-9\n+10\n 00) // m\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-39-40",
+            "content": "@@ -290,17 +290,17 @@\n n(500, 9\n-5\n+0\n 0) // mo\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_05-39-48",
+            "content": "@@ -110,17 +110,16 @@\n n+1)%0A%7D%0A%0A\n-%0A\n func (p \n@@ -155,241 +155,17 @@\n ) %7B%0A\n-%09// if size %3C 2 %7B%0A%09// %09return %0A%09// %7D%0A%0A%09queue := %5B%5DPenState%7B%7Bp.x, p.y, p.angle, size%7D%7D%0A%0A%09for len(queue) %3E 0 %7B%0A%09%09ht := queue%5B0%5D%0A%09%09queue = queue%5B1:%5D%0A%0A%09%09p.x, p.y, p.angle = ht.x, ht.y, ht.angle%0A%0A%09%09if size %3C 2 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09\n+%0A\n %09p.Walk(\n ht.s\n@@ -164,135 +164,15 @@\n alk(\n-ht.\n size)%0A%0A\n-%09%09queue = append(queue, PenState%7Bp.x, p.y, p.angle+35, size * 0.66%7D, PenState%7Bp.x, p.y, p.angle-35, size * 0.66%7D)%0A%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_06-16-20",
+            "content": "@@ -348,19 +348,16 @@\n e%0A%0A%09%09if \n-ht.\n size %3C 2\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_06-17-10",
+            "content": "@@ -449,27 +449,24 @@\n p.angle+35, \n-ht.\n size * 0.66%7D\n@@ -498,19 +498,16 @@\n gle-35, \n-ht.\n size * 0\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_06-17-32",
+            "content": "@@ -152,16 +152,54 @@\n at64) %7B%0A\n+%09// if size %3C 2 %7B%0A%09// %09return %0A%09// %7D%0A%0A\n %09queue :\n@@ -425,147 +425,38 @@\n eue,\n-%0A%09%09%09PenState%7Bp.x, p.y, p.angle + 20, ht.size * 0.7%7D,%0A%09%09%09PenState%7Bp.x, p.y, p.angle - 20, ht.size * 0.7%7D,%0A%09%09%09PenState%7Bp.x, p.y, p.angle + 10\n+ PenState%7Bp.x, p.y, p.angle+35\n , ht\n@@ -469,15 +469,13 @@\n * 0.\n-7%7D,%0A%09%09%09\n+66%7D, \n PenS\n@@ -500,13 +500,11 @@\n ngle\n- - 10\n+-35\n , ht\n@@ -517,14 +517,11 @@\n * 0.\n-7%7D,%0A%09%09\n+66%7D\n )%0A%09%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_06-22-53",
+            "content": "@@ -405,37 +405,37 @@\n .x, p.y, p.angle\n-*0.66\n+ + 20\n , ht.size * 0.7%7D\n@@ -457,37 +457,37 @@\n .x, p.y, p.angle\n-*0.66\n+ - 20\n , ht.size * 0.7%7D\n@@ -509,37 +509,37 @@\n .x, p.y, p.angle\n-*0.66\n+ + 10\n , ht.size * 0.7%7D\n@@ -573,13 +573,13 @@\n ngle\n-*0.66\n+ - 10\n , ht\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_06-23-29",
+            "content": "@@ -364,35 +364,8 @@\n e)%0A%0A\n-%09%09newSize := ht.size * 0.7%0A\n %09%09qu\n@@ -409,33 +409,44 @@\n p.y, p.angle\n-, newSize\n+*0.66, ht.size * 0.7\n %7D,%0A%09%09%09PenSta\n@@ -461,33 +461,44 @@\n p.y, p.angle\n-, newSize\n+*0.66, ht.size * 0.7\n %7D,%0A%09%09%09PenSta\n@@ -513,33 +513,44 @@\n p.y, p.angle\n-, newSize\n+*0.66, ht.size * 0.7\n %7D,%0A%09%09%09PenSta\n@@ -573,17 +573,28 @@\n ngle\n-, newSize\n+*0.66, ht.size * 0.7\n %7D,%0A%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_06-24-57",
+            "content": "@@ -389,10 +389,9 @@\n * 0.\n-66\n+7\n %0A%09%09q\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_06-25-12",
+            "content": "@@ -362,19 +362,16 @@\n ize)%0A%0A%09%09\n-// \n newSize \n@@ -445,29 +445,17 @@\n ngle\n- + 18, ht.size * 0.72\n+, newSize\n %7D,%0A%09\n@@ -486,33 +486,20 @@\n ngle\n- - 18, ht.size * 0.72\n+, newSize\n %7D,%0A\n-%0A\n %09%09%09P\n@@ -527,84 +527,20 @@\n ngle\n- + 10, ht.size * 0.6%7D,%0A%09%09%09PenState%7Bp.x, p.y, p.angle - 10, ht.size * 0.6\n+, newSize\n %7D,%0A\n-%0A\n %09%09%09P\n@@ -568,80 +568,17 @@\n ngle\n- + 4, ht.size * 0.45%7D,%0A%09%09%09PenState%7Bp.x, p.y, p.angle - 4, ht.size * 0.45\n+, newSize\n %7D,%0A%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_06-27-53",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\n\nfunc (p *Pen) drawWeizen(size float64) {\n\tqueue := []PenState{{p.x, p.y, p.angle, size}}\n\n\tfor len(queue) > 0 {\n\t\tht := queue[0]\n\t\tqueue = queue[1:]\n\n\t\tp.x, p.y, p.angle = ht.x, ht.y, ht.angle\n\n\t\tif ht.size < 2 {\n\t\t\tcontinue\n\t\t}\n\n\t\tp.Walk(ht.size)\n\n\t\t// newSize := ht.size * 0.66\n\t\tqueue = append(queue,\n\t\t\tPenState{p.x, p.y, p.angle + 18, ht.size * 0.72},\n\t\t\tPenState{p.x, p.y, p.angle - 18, ht.size * 0.72},\n\n\t\t\tPenState{p.x, p.y, p.angle + 10, ht.size * 0.6},\n\t\t\tPenState{p.x, p.y, p.angle - 10, ht.size * 0.6},\n\n\t\t\tPenState{p.x, p.y, p.angle + 4, ht.size * 0.45},\n\t\t\tPenState{p.x, p.y, p.angle - 4, ht.size * 0.45},\n\t\t)\n\t}\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetPosition(500, 950) // move o pincel para x 250, y 500\n\tpen.SetLineWidth(1.5)\n\tpen.SetRGB(255, 255, 255)\n\tpen.SetHeading(90)\n\n\tpen.drawWeizen(300)\n\n\tpen.SavePNG(\"weizen.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "53"
         }
     ]
 }

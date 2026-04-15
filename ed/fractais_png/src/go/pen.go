@@ -13,11 +13,17 @@ type Pen struct {
 	dc      *gg.Context
 }
 
+type PenState struct {
+	x, y float64
+	angle float64
+	size float64
+}
+
 func NewPen(width, height int) *Pen {
 	dc := gg.NewContext(width, height)
-	dc.SetRGB(1, 1, 1)
+	dc.SetRGB(0,0,0)
 	dc.Clear()
-	dc.SetRGB(0, 0, 0)
+	dc.SetRGB(255, 255, 255)
 	dc.SetLineWidth(2)
 	return &Pen{
 		x: float64(width) / 2, y: float64(height) / 2,
