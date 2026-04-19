@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-19_08-53-02",
+            "content": "@@ -126,347 +126,34 @@\n %7D;%0A%0A\n-typedef struct %7B%0A  node *head;%0A  node *tail;%0A  int size;%0A%7D linked;%0A%0Alinked *createLinked() %7B%0A  linked *l = malloc(sizeof(linked));%0A  l-%3Ehead = NULL;%0A  l-%3Etail = NULL;%0A  l-%3Esize = 0;%0A%0A  return l;%0A%7D%0A%0A// node *createNode(int data) %7B%0A//   node *n = malloc(sizeof(node));%0A//   n-%3Edata = data;%0A//%0A//   return n;%0A// %7D%0A%0Alinked *pushFront(linked *l\n+node *pushFront(node *head\n , in\n@@ -206,32 +206,50 @@\n n-%3Edata = data;%0A\n+  n-%3Enext = head;%0A\n   n-%3Eprevious = \n@@ -257,37 +257,16 @@\n ULL;\n-%0A  n-%3Enext = l-%3Ehead;\n %0A%0A  if (\n l-%3Eh\n@@ -261,19 +261,16 @@\n %0A%0A  if (\n-l-%3E\n head != \n@@ -281,19 +281,16 @@\n ) %7B%0A    \n-l-%3E\n head-%3Epr\n@@ -308,65 +308,8 @@\n %0A  %7D\n- else %7B%0A    l-%3Etail = n;%0A  %7D%0A%0A  l-%3Ehead = n;%0A  l-%3Esize++;\n %0A%0A  \n@@ -319,20 +319,18 @@\n urn \n-l\n+n\n ;%0A%7D%0A%0A\n-linked\n+node\n  *pu\n@@ -336,24 +336,25 @@\n ushBack(\n-linked *\n+node *tai\n l, int d\n@@ -428,19 +428,16 @@\n vious = \n-l-%3E\n tail;%0A  \n@@ -456,25 +456,8 @@\n LL;%0A\n-%0A  l-%3Etail = n;%0A%0A\n   re\n@@ -461,17 +461,17 @@\n  return \n-l\n+n\n ;%0A%7D%0A%0Avoi\n@@ -624,40 +624,181 @@\n () %7B\n- linked *linked = createLinked(); \n+%0A  node *linkedlist = NULL;%0A%0A  linkedlist = pushFront(linkedlist, 7);%0A  linkedlist = pushFront(linkedlist, 10);%0A  linkedlist = pushFront(linkedlist, 3);%0A%0A  print(linkedlist);%0A\n %7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-19_09-13-55",
+            "content": "@@ -878,22 +878,20 @@\n d print(\n-linked\n+node\n  *l) %7B%0A \n@@ -912,50 +912,34 @@\n  = l\n--%3Ehead;%0A  for (int i = 0; i %3C l-%3Esize; i++\n+;%0A  while (current != NULL\n ) %7B%0A\n@@ -1016,26 +1016,24 @@\n int main() %7B\n-%0A \n  linked *lin\n@@ -1057,58 +1057,7 @@\n d();\n-%0A  linked = pushFront(linked, 7);%0A%0A  print(linked);%0A\n+ \n %7D%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-04-19_09-17-16",
+            "content": "@@ -1110,109 +1110,8 @@\n  7);\n-%0A  linked = pushFront(linked, 10);%0A  linked = pushFront(linked, 18);%0A  linked = pushFront(linked, 3);\n %0A%0A  \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-19_09-17-42",
+            "content": "@@ -842,113 +842,19 @@\n %0A%0A  \n-if (l-%3Etail != NULL) %7B%0A    l-%3Etail-%3Enext = n;%0A  %7D else %7B%0A    l-%3Ehead = n;%0A  %7D%0A%0A  l-%3Etail = n;%0A  l-%3Esize++\n+l-%3Etail = n\n ;%0A%0A \n@@ -924,30 +924,40 @@\n ;%0A  \n-while (current != NULL\n+for (int i = 0; i %3C l-%3Esize; i++\n ) %7B%0A\n@@ -1027,24 +1027,8 @@\n   %7D%0A\n-  printf(%22%5Cn%22);%0A\n %7D%0A%0Ai\n@@ -1148,36 +1148,37 @@\n %0A  linked = push\n-Back\n+Front\n (linked, 18);%0A  \n@@ -1186,28 +1186,29 @@\n inked = push\n-Back\n+Front\n (linked, 3);\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-04-19_09-24-07",
+            "content": "@@ -434,21 +434,24 @@\n ;%0A// %7D%0A%0A\n-voi\n+linke\n d \n+*\n pushFron\n@@ -684,24 +684,40 @@\n size++;%0A\n-%7D%0A%0Avoi\n+%0A  return l;%0A%7D%0A%0Alinke\n d \n+*\n pushBack\n@@ -944,16 +944,29 @@\n %3Esize++;\n+%0A%0A  return l;\n %0A%7D%0A%0Avoid\n@@ -1171,24 +1171,33 @@\n eLinked();%0A \n+ linked =\n  pushFront(l\n@@ -1204,24 +1204,33 @@\n inked, 7);%0A \n+ linked =\n  pushFront(l\n@@ -1238,24 +1238,33 @@\n nked, 10);%0A \n+ linked =\n  pushBack(li\n@@ -1275,16 +1275,25 @@\n , 18);%0A \n+ linked =\n  pushBac\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-04-19_09-27-12",
+            "content": "@@ -933,105 +933,8 @@\n %0A%7D%0A%0A\n-void popBack(linked *l) %7B%0A  l-%3Etail = l-%3Etail-%3Eprevious;%0A  l-%3Etail-%3Enext = NULL;%0A  l-%3Esize--;%0A%7D%0A%0A\n void\n@@ -1243,28 +1243,8 @@\n );%0A%0A\n-  popBack(linked);%0A%0A\n   pr\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-04-19_09-30-34",
+            "content": "@@ -957,20 +957,16 @@\n *l) %7B%0A  \n-if (\n l-%3Etail \n@@ -970,403 +970,51 @@\n il =\n-= NULL)%0A    return;%0A%0A  if (l-%3Etail-%3Eprevious == NULL) %7B%0A    l-%3Ehead = NULL;%0A    l-%3Etail = NULL;%0A  %7D else %7B%0A    l-%3Etail = l-%3Etail-%3Eprevious;%0A    l-%3Etail-%3Enext = NULL;%0A  %7D%0A%0A  l-%3Esize--;%0A%7D%0A%0Avoid popFront(linked *l) %7B%0A  if (l-%3Ehead != NULL)%0A    return;%0A%0A  if (l-%3Ehead-%3Enext == NULL) %7B%0A    l-%3Ehead = NULL;%0A    l-%3Etail = NULL;%0A  %7D else %7B%0A    l-%3Ehead = l-%3Ehead-%3Enext;%0A    l-%3Ehead-%3Eprevious = NULL;%0A  %7D%0A\n+ l-%3Etail-%3Eprevious;%0A  l-%3Etail-%3Enext = NULL;\n %0A  l\n@@ -1237,36 +1237,37 @@\n Linked();%0A  push\n-Back\n+Front\n (linked, 18);%0A  \n@@ -1263,10 +1263,9 @@\n ed, \n-18\n+7\n );%0A \n@@ -1261,36 +1261,37 @@\n nked, 7);%0A  push\n-Back\n+Front\n (linked, 3);%0A  p\n@@ -1287,9 +1287,10 @@\n ed, \n-3\n+10\n );%0A \n@@ -1311,9 +1311,10 @@\n ed, \n-2\n+18\n );%0A \n@@ -1331,18 +1331,17 @@\n linked, \n-10\n+3\n );%0A%0A  po\n@@ -1358,28 +1358,8 @@\n ed);\n-%0A  popFront(linked);\n %0A%0A  \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-19_09-43-26",
+            "content": "@@ -1198,17 +1198,17 @@\n l-%3Ehead \n-=\n+!\n = NULL)%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-19_09-44-12",
+            "content": "@@ -316,24 +316,138 @@\n eturn l;%0A%7D%0A%0A\n+// node *createNode(int data) %7B%0A//   node *n = malloc(sizeof(node));%0A//   n-%3Edata = data;%0A//%0A//   return n;%0A// %7D%0A%0A\n void pushFro\n@@ -1386,392 +1386,8 @@\n %0A%7D%0A%0A\n-void freeLinked(linked *l) %7B%0A  node *current = l-%3Ehead;%0A  while (current != NULL) %7B%0A    node *next = current-%3Enext;%0A    free(current);%0A    current = next;%0A  %7D%0A%0A  free(l);%0A%7D%0A%0Anode *search(linked *l, int data) %7B%0A  node *current = l-%3Ehead;%0A  while (current-%3Edata != data) %7B%0A    if (current-%3Enext == NULL) %7B%0A      return NULL;%0A    %7D%0A    current = current-%3Enext;%0A  %7D%0A%0A  return current;%0A%7D%0A%0A\n void\n@@ -1388,25 +1388,24 @@\n %0A%0Avoid print\n-l\n (linked *l) \n@@ -1551,127 +1551,8 @@\n %0A%7D%0A%0A\n-void printn(node *n) %7B%0A  printf(%22prev:%25d, data:%25d, next:%25d%5Cn%22, n-%3Eprevious-%3Edata, n-%3Edata,%0A         n-%3Enext-%3Edata);%0A%7D%0A%0A\n int \n@@ -1737,17 +1737,16 @@\n %0A  print\n-l\n (linked)\n@@ -1750,68 +1750,7 @@\n ed);\n-%0A%0A  node *searchBy2 = search(linked, 2);%0A  printn(searchBy2);\n %0A%7D%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-19_09-57-34",
+            "content": "@@ -2140,19 +2140,16 @@\n ked);%0A%0A \n- //\n  node *s\n@@ -2183,11 +2183,8 @@\n );%0A \n- //\n  pri\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-19_09-57-58",
+            "content": "@@ -2140,16 +2140,19 @@\n ked);%0A%0A \n+ //\n  node *s\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-19_09-58-11",
+            "content": "@@ -2179,16 +2179,19 @@\n d, 2);%0A \n+ //\n  printn(\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-19_09-58-32",
+            "content": "@@ -1576,38 +1576,8 @@\n ) %7B%0A\n-      printf(%22not found!%5Cn%22);%0A\n     \n@@ -1635,30 +1635,8 @@\n  %7D%0A%0A\n-  printf(%22found!%5Cn%22);%0A\n   re\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-19_09-59-17",
+            "content": "@@ -2235,11 +2235,8 @@\n );%0A \n- //\n  pri\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-19_09-59-31",
+            "content": "@@ -1894,19 +1894,16 @@\n  *n) %7B%0A \n- //\n  printf(\n@@ -1962,19 +1962,16 @@\n %3Edata,%0A \n- //\n         \n@@ -1990,34 +1990,8 @@\n a);%0A\n-  printf(%22%25d %22, n-%3Edata);%0A\n %7D%0A%0Ai\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-19_10-00-43",
+            "content": "@@ -2259,24 +2259,27 @@\n inked, 2);%0A \n+ //\n  printn(sear\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-19_10-00-53",
+            "content": "@@ -1894,16 +1894,19 @@\n  *n) %7B%0A \n+ //\n  printf(\n@@ -1965,16 +1965,19 @@\n %3Edata,%0A \n+ //\n         \n@@ -1993,19 +1993,16 @@\n data);%0A \n- //\n  printf(\n@@ -2165,19 +2165,16 @@\n  10);%0A%0A \n- //\n  popBack\n@@ -2184,19 +2184,16 @@\n nked);%0A \n- //\n  popFron\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-19_10-02-12",
+            "content": "@@ -1899,175 +1899,82 @@\n %7B%0A  \n-if (n-%3Eprevious)%0A    printf(%22prev:%25d, %22, n-%3Eprevious-%3Edata);%0A  else%0A    printf(%22prev:NULL, %22);%0A%0A  printf(%22data:%25d, %22, n-%3Edata);%0A%0A  if (n-%3Enext)%0A    printf(%22next:%25d%5Cn%22,\n+printf(%22prev:%25d, data:%25d, next:%25d%5Cn%22, n-%3Eprevious-%3Edata, n-%3Edata,%0A        \n  n-%3E\n@@ -1992,16 +1992,10 @@\n ;%0A  \n-else%0A   \n+//\n  pri\n@@ -2003,20 +2003,21 @@\n tf(%22\n-next:NULL%5Cn%22\n+%25d %22, n-%3Edata\n );%0A%7D\n@@ -2162,16 +2162,19 @@\n  10);%0A%0A \n+ //\n  popBack\n@@ -2184,16 +2184,19 @@\n nked);%0A \n+ //\n  popFron\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-04-19_10-06-36",
+            "content": "@@ -1568,24 +1568,54 @@\n  == NULL) %7B%0A\n+      printf(%22not found!%5Cn%22);%0A\n       return\n@@ -1661,16 +1661,38 @@\n t;%0A  %7D%0A%0A\n+  printf(%22found!%5Cn%22);%0A\n   return\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-19_10-06-58",
+            "content": "#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct node node;\n\nstruct node {\n  int data;\n  node *previous;\n  node *next;\n};\n\ntypedef struct {\n  node *head;\n  node *tail;\n  int size;\n} linked;\n\nlinked *createLinked() {\n  linked *l = malloc(sizeof(linked));\n  l->head = NULL;\n  l->tail = NULL;\n  l->size = 0;\n\n  return l;\n}\n\nvoid pushFront(linked *l, int data) {\n  node *n = malloc(sizeof(node));\n  n->data = data;\n  n->previous = NULL;\n  n->next = l->head;\n\n  if (l->head != NULL) {\n    l->head->previous = n;\n  } else {\n    l->tail = n;\n  }\n\n  l->head = n;\n  l->size++;\n}\n\nvoid pushBack(linked *l, int data) {\n  node *n = malloc(sizeof(node));\n  n->data = data;\n  n->previous = l->tail;\n  n->next = NULL;\n\n  if (l->tail != NULL) {\n    l->tail->next = n;\n  } else {\n    l->head = n;\n  }\n\n  l->tail = n;\n  l->size++;\n}\n\nvoid popBack(linked *l) {\n  if (l->tail == NULL)\n    return;\n\n  if (l->tail->previous == NULL) {\n    l->head = NULL;\n    l->tail = NULL;\n  } else {\n    l->tail = l->tail->previous;\n    l->tail->next = NULL;\n  }\n\n  l->size--;\n}\n\nvoid popFront(linked *l) {\n  if (l->head == NULL)\n    return;\n\n  if (l->head->next == NULL) {\n    l->head = NULL;\n    l->tail = NULL;\n  } else {\n    l->head = l->head->next;\n    l->head->previous = NULL;\n  }\n\n  l->size--;\n}\n\nvoid freeLinked(linked *l) {\n  node *current = l->head;\n  while (current != NULL) {\n    node *next = current->next;\n    free(current);\n    current = next;\n  }\n\n  free(l);\n}\n\nnode *search(linked *l, int data) {\n  node *current = l->head;\n  while (current->data != data) {\n    if (current->next == NULL) {\n      return NULL;\n    }\n    current = current->next;\n  }\n\n  return current;\n}\n\nvoid printl(linked *l) {\n  node *current = l->head;\n  while (current != NULL) {\n    printf(\"%d \", current->data);\n    current = current->next;\n  }\n  printf(\"\\n\");\n}\n\nvoid printn(node *n) {\n  if (n->previous)\n    printf(\"prev:%d, \", n->previous->data);\n  else\n    printf(\"prev:NULL, \");\n\n  printf(\"data:%d, \", n->data);\n\n  if (n->next)\n    printf(\"next:%d\\n\", n->next->data);\n  else\n    printf(\"next:NULL\\n\");\n}\n\nint main() {\n  linked *linked = createLinked();\n  pushBack(linked, 18);\n  pushBack(linked, 3);\n  pushBack(linked, 2);\n  pushBack(linked, 10);\n\n  popBack(linked);\n  popFront(linked);\n\n  printl(linked);\n\n  node *searchBy2 = search(linked, 2);\n  printn(searchBy2);\n}\n",
+            "lines": "149"
+        }
+    ]
+}
