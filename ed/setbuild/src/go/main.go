@@ -54,12 +54,59 @@ func (s *set) Reserve(newCapacity int) {
 	s.capacity = newCapacity
 }
 
+func (s *set) InsertOrder(value int) {
+	exist, id := s.BinarySearch(value)
+	if exist {
+		return
+	}
+
+	if s.size == s.capacity {
+		s.Reserve(s.capacity * 2)
+	}
+
+	for i := s.size; i > id; i-- {
+		s.data[i] = s.data[i-1]
+	}
+
+	s.data[id] = value
+	s.size++
+}
+
+func (s *set) Erase(value int) {
+	exist, id := s.BinarySearch(value)
+	if !exist {
+		fmt.Println("value not found")
+		return
+	}
+
+	for i := id; i < s.size-1; i++ {
+		s.data[i] = s.data[i+1]
+	}
+	s.size--
+}
+
+func (s *set) BinarySearch(value int) (bool, int) {
+	low := 0
+	high := s.size - 1
+
+	for low <= high {
+		mid := (low + high) / 2
+		if s.data[mid] == value {
+			return true, mid
+		} else if s.data[mid] < value {
+			low = mid + 1
+		} else {
+			high = mid - 1
+		}
+	}
+	return false, low
+}
 
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
 
-	v := NewSet(0)
+	s := NewSet(0)
 
 	for scanner.Scan() {
 		fmt.Print("$")
@@ -76,17 +123,21 @@ func main() {
 			return
 		case "init":
 			value, _ := strconv.Atoi(parts[1])
-			v = NewSet(value)
+			s = NewSet(value)
 		case "insert":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// }
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				s.InsertOrder(value)
+			}
 		case "show":
-			fmt.Println(v)
+			fmt.Println(s)
 		case "erase":
-			// value, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[1])
+			s.Erase(value)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[1])
+			exist, _ := s.BinarySearch(value)
+			fmt.Println(exist)
 		case "clear":
 		default:
 			fmt.Println("fail: comando invalido")

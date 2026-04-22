@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-22_06-50-00",
+            "content": "@@ -1081,91 +1081,80 @@\n id)%0A\n-%09s.data%5Bid%5D = value%0A%09for i := id + 1; i %3C s.size; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09\n+%0A%09// for i := range(s.size) %7B%0A%09// %09ele := s.data%5Bi%5D%0A%09// %09if value %3C%0A%09// \n %7D%0A%7D%0A\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-04-22_06-53-40",
+            "content": "@@ -1166,18 +1166,8 @@\n %0A%09%7D%0A\n-%09s.size++%0A\n %7D%0A%0Af\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-04-22_06-54-53",
+            "content": "@@ -1058,95 +1058,84 @@\n %7D%0A%0A%09\n-if s.size == s.capacity %7B%0A%09%09s.Reserve(s.capacity * 2)%0A%09%7D%0A%0A%09for i := s.size; i %3E id; i--\n+fmt.Println(exist, id)%0A%09s.data%5Bid%5D = value%0A%09for i := id + 1; i %3C s.size; i++\n  %7B%0A%09\n@@ -1159,35 +1159,14 @@\n ta%5Bi\n--\n++\n 1%5D%0A%09%7D\n-%0A%0A%09s.data%5Bid%5D = value\n %0A%09s.\n@@ -1426,17 +1426,17 @@\n h = mid \n--\n++\n  1%0A%09%09%7D%0A%09\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-04-22_06-59-49",
+            "content": "@@ -1485,19 +1485,19 @@\n  false, \n-low\n+mid\n %0A%7D%0A%0Afunc\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-22_07-02-27",
+            "content": "@@ -1293,29 +1293,8 @@\n - 1%0A\n-%0A%09for low %3C= high %7B%0A%09\n %09mid\n@@ -1313,16 +1313,36 @@\n igh) / 2\n+%0A%0A%09for low %3C= high %7B\n %0A%09%09if s.\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-22_07-02-47",
+            "content": "@@ -1486,20 +1486,19 @@\n  false, \n-high\n+low\n %0A%7D%0A%0Afunc\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-22_07-04-20",
+            "content": "@@ -1486,19 +1486,20 @@\n  false, \n-low\n+high\n %0A%7D%0A%0Afunc\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-22_07-04-44",
+            "content": "@@ -2143,20 +2143,20 @@\n %0A%09%09%09\n-exist, _ := \n+fmt.Println(\n s.Bi\n@@ -2176,29 +2176,8 @@\n lue)\n-%0A%09%09%09fmt.Println(exist\n )%0A%09%09\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-22_07-05-25",
+            "content": "@@ -1211,200 +1211,8 @@\n %0A%7D%0A%0A\n-func (s *set) Erase(value int) %7B%0A%09exist, id := s.BinarySearch(value)%0A%0A%09if !exist %7B%0A%09%09fmt.Print(%22value not found%22)%0A%09%7D%0A%0A%09for i := id; i %3C s.size; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%7D%0A%0A\n func\n@@ -2037,24 +2037,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2083,26 +2083,8 @@\n 1%5D)%0A\n-%09%09%09s.Erase(value)%0A\n %09%09ca\n",
+            "lines": "133"
+        },
+        {
+            "label": "2026-04-22_07-08-46",
+            "content": "@@ -1280,29 +1280,8 @@\n ue)%0A\n-%09fmt.Print(exist, id)\n %0A%09if\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-04-22_07-09-18",
+            "content": "@@ -1580,26 +1580,8 @@\n e %7B%0A\n-%09%09%09fmt.Print(mid)%0A\n %09%09%09r\n@@ -1687,23 +1687,8 @@\n %0A%09%7D%0A\n-%09fmt.Print(low)\n %0A%09re\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-04-22_07-11-57",
+            "content": "@@ -1370,18 +1370,16 @@\n %3C s.size\n--1\n ; i++ %7B%0A\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-04-22_07-15-00",
+            "content": "@@ -1272,24 +1272,46 @@\n arch(value)%0A\n+%09fmt.Print(exist, id)%0A\n %09if !exist %7B\n@@ -1578,16 +1578,34 @@\n value %7B%0A\n+%09%09%09fmt.Print(mid)%0A\n %09%09%09retur\n@@ -1699,24 +1699,40 @@\n  - 1%0A%09%09%7D%0A%09%7D%0A\n+%09fmt.Print(low)%0A\n %09return fals\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-04-22_07-15-28",
+            "content": "@@ -1300,18 +1300,16 @@\n mt.Print\n-ln\n (%22value \n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-04-22_07-15-41",
+            "content": "@@ -1322,25 +1322,16 @@\n found%22)%0A\n-%09%09return%0A\n %09%7D%0A%0A%09for\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-04-22_07-15-56",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (s *set) String() string {\n\treturn fmt.Sprint(\"[\" + Join(s.data[0:s.size], \", \") + \"]\")\n}\n\nfunc (s *set) Status() string {\n\treturn fmt.Sprintf(\"size:%d capacity:%d\", s.size, s.capacity)\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tvar result strings.Builder\n\tfmt.Fprintf(&result, \"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tfmt.Fprintf(&result, \"%s%d\", sep, value)\n\t}\n\treturn result.String()\n}\n\nfunc NewSet(capacity int) *set {\n\treturn &set{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (s *set) Reserve(newCapacity int) {\n\tnewData := make([]int, newCapacity)\n\n\t// fmt.Println(newData.Status())\n\tfor i := 0; i < s.size; i++ {\n\t\tnewData[i] = s.data[i]\n\t}\n\t// s = &newsector NAO FUNCIONA\n\ts.data = newData\n\ts.capacity = newCapacity\n}\n\nfunc (s *set) InsertOrder(value int) {\n\texist, id := s.BinarySearch(value)\n\tif exist {\n\t\treturn\n\t}\n\n\tif s.size == s.capacity {\n\t\ts.Reserve(s.capacity * 2)\n\t}\n\n\tfor i := s.size; i > id; i-- {\n\t\ts.data[i] = s.data[i-1]\n\t}\n\n\ts.data[id] = value\n\ts.size++\n}\n\nfunc (s *set) Erase(value int) {\n\texist, id := s.BinarySearch(value)\n\tif !exist {\n\t\tfmt.Println(\"value not found\")\n\t\treturn\n\t}\n\n\tfor i := id; i < s.size-1; i++ {\n\t\ts.data[i] = s.data[i+1]\n\t}\n\ts.size--\n}\n\nfunc (s *set) BinarySearch(value int) (bool, int) {\n\tlow := 0\n\thigh := s.size - 1\n\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif s.data[mid] == value {\n\t\t\treturn true, mid\n\t\t} else if s.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn false, low\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\ts := NewSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\ts = NewSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\ts.InsertOrder(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(s)\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\ts.Erase(value)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\texist, _ := s.BinarySearch(value)\n\t\t\tfmt.Println(exist)\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "146"
+        }
+    ]
+}
