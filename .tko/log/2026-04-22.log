@@ -32,3 +32,12 @@
 2026-04-22 07:15:28, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:145
 2026-04-22 07:15:41, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:145
 2026-04-22 07:15:56, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:146
+2026-04-22 20:20:23, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-22 20:20:34, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-22 20:20:38, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-22 20:20:55, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-22 20:20:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-22 20:20:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-22 20:20:23, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-22 20:20:38, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-22 20:20:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT

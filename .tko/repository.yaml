@@ -22,14 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@sandbox
 - ed@vector
 flags:
-  inbox: all
-  panel: help
+  inbox: inbox
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
-selected_index: 8
+selected: ed@bettersearch
+selected_index: 5
