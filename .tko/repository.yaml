@@ -24,11 +24,11 @@ sources:
 expanded:
 - ed@vector
 flags:
-  inbox: inbox
-  panel: graph
+  inbox: all
+  panel: help
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bettersearch
-selected_index: 5
+selected: ed@multiset
+selected_index: 9

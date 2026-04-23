@@ -40,3 +40,8 @@
 2026-04-23 06:42:29, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:9, size:48
 2026-04-23 06:42:53, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:54, size:47
 2026-04-23 06:43:05, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:46
+2026-04-23 06:43:04, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-23 06:43:04, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-23 06:43:05, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-23 06:44:23, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-23 06:51:29, SELF, v:1, k:ed@vetbuild, self:1, rate:100, concept:1
