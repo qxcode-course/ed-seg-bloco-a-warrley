@@ -26,7 +26,7 @@ expanded:
 flags:
   inbox: all
   panel: help
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go

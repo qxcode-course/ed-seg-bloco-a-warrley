@@ -45,3 +45,126 @@
 2026-04-23 06:43:05, MOVE, v:1, k:ed@bettersearch, mode:EDIT
 2026-04-23 06:44:23, MOVE, v:1, k:ed@bettersearch, mode:BACK
 2026-04-23 06:51:29, SELF, v:1, k:ed@vetbuild, self:1, rate:100, concept:1
+2026-04-23 18:23:28, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-23 18:23:28, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100
+2026-04-23 18:23:29, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-23 18:24:02, SELF, v:1, k:ed@bettersearch, self:1, rate:100, concept:1, refactor:1
+2026-04-23 18:24:05, MOVE, v:1, k:ed@multiset, mode:DOWN
+2026-04-23 18:24:53, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-23 18:24:55, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-23 18:25:02, SELF, v:1, k:ed@setbuild, self:1, rate:100
+2026-04-23 18:25:10, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-04-23 18:25:11, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0
+2026-04-23 18:24:05, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:24:05, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:24:05, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:24:05, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:25:11, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:33:33, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:33:33, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:35:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:35:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:43:34, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:43:34, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:44:35, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:84
+2026-04-23 18:47:52, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:47:52, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:44:35, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:49:07, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:90
+2026-04-23 18:49:50, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:90
+2026-04-23 18:50:57, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:91
+2026-04-23 18:51:21, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:91
+2026-04-23 18:53:28, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:96
+2026-04-23 18:53:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:53:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:53:28, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:54:12, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 18:54:12, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:01:06, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:101
+2026-04-23 19:01:38, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:02:29, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:03:18, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:03:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:03:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:03:18, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:04:17, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:04:51, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-04-23 19:05:05, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:05:44, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:07:21, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:08:10, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:08:33, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:08:30, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:08:30, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:08:33, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:10:43, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-04-23 19:10:44, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-23 19:10:44, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100
+2026-04-23 19:12:03, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-23 19:12:05, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-23 19:12:05, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-23 19:12:06, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-04-23 19:12:06, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:10:44, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-23 19:13:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:13:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:12:06, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:13:42, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:13:55, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:14:12, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:15:56, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:16:22, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:16:38, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:103
+2026-04-23 19:16:46, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-04-23 19:16:45, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:16:45, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:16:46, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:20:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:20:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:27:40, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:27:40, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:38:03, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 19:38:03, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:06:38, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:06:38, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:16:41, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:16:41, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:23:48, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:23:48, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:24:05, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:124
+2026-04-23 20:24:05, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:28:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:28:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:29:37, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:29:37, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:38:53, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:136
+2026-04-23 20:38:51, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:38:51, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:38:53, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:42:01, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:140
+2026-04-23 20:42:48, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:140
+2026-04-23 20:43:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:43:29, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:42:48, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:44:25, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:140
+2026-04-23 20:44:43, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0
+2026-04-23 20:44:51, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0
+2026-04-23 20:45:00, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0
+2026-04-23 20:46:27, EXEC, v:1, k:ed@multiset, mode:FULL, rate:16, size:140
+2026-04-23 20:48:49, EXEC, v:1, k:ed@multiset, mode:FULL, rate:16, size:145
+2026-04-23 20:49:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:49:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:48:49, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:49:42, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:146
+2026-04-23 20:53:51, EXEC, v:1, k:ed@multiset, mode:FULL, size:168, fail:COMP
+2026-04-23 20:54:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:54:00, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:49:42, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-23 20:54:01, EXEC, v:1, k:ed@multiset, mode:FULL, fail:COMP
+2026-04-23 20:54:13, EXEC, v:1, k:ed@multiset, mode:LOCK, fail:COMP
+2026-04-23 20:54:29, EXEC, v:1, k:ed@multiset, mode:LOCK, rate:100, size:167
+2026-04-23 20:54:38, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33
+2026-04-23 20:55:14, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:168
+2026-04-23 20:56:01, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:171
+2026-04-23 20:56:15, EXEC, v:1, k:ed@multiset, mode:FULL, rate:50, size:171
+2026-04-23 20:56:38, MOVE, v:1, k:ed@multiset, mode:BACK

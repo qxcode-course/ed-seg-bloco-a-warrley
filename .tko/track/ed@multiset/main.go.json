@@ -2,8 +2,288 @@
     "patches": [
         {
             "label": "2026-04-23_06-33-46",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\t// ms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\t\t// ms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\t// for _, part := range args[1:] {\n\t\t\t// \tvalue, _ := strconv.Atoi(part)\n\t\t\t// }\n\t\tcase \"show\":\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"count\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -56,367 +56,8 @@\n %0A)%0A%0A\n-type multiset struct %7B%0A%09data     %5B%5Dint%0A%09size     int%0A%09capacity int%0A%7D%0A%0Afunc newMulitSet(capacity int) *multiset %7B%0A%09var ms multiset%0A%09ms.data = make(%5B%5Dint, capacity)%0A%09ms.capacity = capacity%0A%09ms.size = 0%0A%0A%09return &ms%0A%7D%0A%0Afunc (ms *multiset) expand() %7B%0A%09ndata := make(%5B%5Dint, 2*ms.capacity)%0A%0A%09for i := range ms.size %7B%0A%09%09ndata%5Bi%5D = ms.data%5Bi%5D%0A%09%7D%0A%0A%09ms.data = ndata%0A%7D%0A%0A\n func\n",
             "lines": "59"
+        },
+        {
+            "label": "2026-04-23_18-44-35",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -49,16 +49,16 @@\n trings%22%0A\n+\n )%0A%0Atype \n@@ -127,24 +127,24 @@\n %7D%0A%0Afunc \n-N\n+n\n ewMul\n-t\n i\n+t\n Set(capa\n@@ -634,59 +634,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Print() %7B%0A%09println(%22teste%22)%0A%7D%0A%0A\n func\n@@ -706,16 +706,19 @@\n Stdin)%0A%09\n+// \n ms := Ne\n@@ -957,16 +957,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -997,16 +997,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms = New\n@@ -1125,16 +1125,16 @@\n %09%09%09// %7D%0A\n+\n %09%09case %22\n@@ -1144,22 +1144,8 @@\n w%22:%0A\n-%09%09%09ms.Print()%0A\n %09%09ca\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-04-23_18-49-07",
+            "content": "@@ -672,21 +672,17 @@\n nt() %7B%0A%09\n-fmt.P\n+p\n rintln(%22\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-23_18-49-50",
+            "content": "@@ -675,36 +675,8 @@\n ) %7B%0A\n-%09str := Join(ms.data, %22, %22)%0A\n %09fmt\n@@ -684,19 +684,23 @@\n Println(\n-str\n+%22teste%22\n )%0A%7D%0A%0Afun\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-23_18-50-57",
+            "content": "@@ -716,23 +716,11 @@\n tln(\n-%22%5B%22 + str + %22%5D%22\n+str\n )%0A%7D%0A\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-23_18-51-21",
+            "content": "@@ -426,88 +426,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Insert(value int) %7B%0A%09ms.data%5Bms.size%5D = value%0A%09ms.size++%0A%7D%0A%0A\n func\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-23_18-53-28",
+            "content": "@@ -466,55 +466,8 @@\n ) %7B%0A\n-%09if ms.size == ms.capacity %7B%0A%09%09ms.expand()%0A%09%7D%0A%0A\n %09ms.\n@@ -1217,16 +1217,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1255,16 +1255,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1297,29 +1297,11 @@\n %0A%09%09%09\n-%09ms.Insert(value)%0A%09%09%09\n+// \n %7D%0A%09%09\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-04-23_19-01-06",
+            "content": "@@ -466,48 +466,8 @@\n ) %7B%0A\n-%09fmt.Print(ms.size, ms.capacity, value)%0A\n %09if \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-04-23_19-01-38",
+            "content": "@@ -476,44 +476,9 @@\n rint\n-f(%22size:%25d, capacity:%25d, value:%25d%22, \n+(\n ms.s\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-02-29",
+            "content": "@@ -479,19 +479,16 @@\n tf(%22\n-%5Cn\n size:%25d\n-%5Cn\n+,\n  cap\n@@ -495,18 +495,16 @@\n acity:%25d\n-%5Cn\n , value:\n@@ -509,10 +509,8 @@\n e:%25d\n-%5Cn\n %22, m\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-03-18",
+            "content": "@@ -500,16 +500,17 @@\n ity:%25d%5Cn\n+,\n  value:%25\n@@ -577,34 +577,8 @@\n y %7B%0A\n-%09%09fmt.Print(%22aumentando%22)%0A\n %09%09ms\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-04-17",
+            "content": "@@ -423,39 +423,8 @@\n ata%0A\n-%09ms.capacity = 2 * ms.capacity%0A\n %7D%0A%0Af\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-04-51",
+            "content": "@@ -493,16 +493,97 @@\n  int) %7B%0A\n+%09fmt.Printf(%22%5Cnsize:%25d%5Cn capacity:%25d%5Cn value:%25d%5Cn%22, ms.size, ms.capacity, value)%0A\n %09if ms.s\n@@ -603,16 +603,42 @@\n acity %7B%0A\n+%09%09fmt.Print(%22aumentando%22)%0A\n %09%09ms.exp\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-04-23_19-05-05",
+            "content": "@@ -497,89 +497,8 @@\n ) %7B%0A\n-%09fmt.Printf(%22%5Cnsize:%25d%5Cn capacity:%25d%5Cn value:%25d%5Cn%22, ms.size, ms.capacity, value)%0A\n %09if \n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-05-44",
+            "content": "@@ -335,11 +335,8 @@\n int,\n- 0,\n  2*m\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-07-21",
+            "content": "@@ -215,19 +215,16 @@\n e(%5B%5Dint,\n- 0,\n  capacit\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-08-10",
+            "content": "@@ -335,23 +335,17 @@\n (%5B%5Dint, \n-ms.size\n+0\n , 2*ms.c\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-08-33",
+            "content": "@@ -215,16 +215,19 @@\n e(%5B%5Dint,\n+ 0,\n  capacit\n@@ -334,16 +334,25 @@\n e(%5B%5Dint,\n+ ms.size,\n  2*ms.ca\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-12-06",
+            "content": "@@ -904,76 +904,75 @@\n et) \n-String() string %7B%0A%09return %22%5B%22 + Join(ms.data%5B0:ms.size%5D, %22, %22)\n+Print() %7B%0A%09str := Join(ms.data, %22, %22)%0A%09fmt.Println(%22%5B%22 + str\n  + %22%5D%22\n+)\n %0A%7D%0A%0A\n@@ -1490,40 +1490,35 @@\n :%0A%09%09\n-case %22erase%22:%0A%09%09%09fmt.Println(ms)\n+%09ms.Print()%0A%09%09case %22erase%22:\n %0A%09%09%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-13-42",
+            "content": "@@ -494,19 +494,16 @@\n int) %7B%0A%09\n-// \n fmt.Prin\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-13-55",
+            "content": "@@ -947,16 +947,27 @@\n (ms.data\n+%5B0:ms.size%5D\n , %22, %22) \n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-14-12",
+            "content": "@@ -933,27 +933,13 @@\n urn \n-fmt.Sprintf(%22%5B%25s%5D%22,\n+%22%5B%22 +\n  Joi\n@@ -951,27 +951,21 @@\n data\n-%5B0:ms.size%5D\n , %22, %22)\n-)\n+ + %22%5D%22\n %0A%7D%0A%0A\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-15-56",
+            "content": "@@ -933,27 +933,8 @@\n urn \n-%22teste%22%0A%09// return \n fmt.\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_19-16-22",
+            "content": "@@ -1514,24 +1514,40 @@\n e %22show%22:%0A%09%09\n+case %22erase%22:%0A%09%09\n %09fmt.Println\n@@ -1550,32 +1550,16 @@\n ntln(ms)\n-%0A%09%09case %22erase%22:\n %0A%09%09%09// v\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-16-38",
+            "content": "@@ -929,16 +929,35 @@\n %09return \n+%22teste%22%0A%09// return \n fmt.Spri\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-04-23_19-16-46",
+            "content": "@@ -457,312 +457,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) search(value int) (bool, int) %7B%0A%09low, high := 0, ms.size%0A%0A%09for low %3C high %7B%0A%09%09mid := (low + high) / 2%0A%0A%09%09if ms.data%5Blow%5D %3C= value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid%0A%09%09%7D%0A%09%7D%0A%0A%09pos := low - 1%0A%0A%09if pos %3E= 0 && ms.data%5Bpos%5D == value %7B%0A%09%09return true, pos%0A%09%7D%0A%0A%09return false, low%0A%7D%0A%0A\n func\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-23_20-24-05",
+            "content": "@@ -761,184 +761,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) insert(value, index int) error %7B%0A%09for i := ms.size - 1; i %3E index; i-- %7B%0A%09%09ms.data%5Bi%5D = ms.data%5Bi-1%5D%0A%09%7D%0A%0A%09ms.data%5Bindex%5D = value%0A%09ms.size++%0A%0A%09return nil%0A%7D%0A%0A\n func\n@@ -797,16 +797,16 @@\n  int) %7B%0A\n+\n %09// fmt.\n@@ -933,62 +933,43 @@\n %7D%0A%0A%09\n-_, index := ms.search(\n+ms.data%5Bms.size%5D = \n value\n-)%0A\n %0A%09ms.\n-insert(value, index)\n+size++\n %0A%7D%0A%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-04-23_20-38-53",
+            "content": "@@ -814,79 +814,8 @@\n r %7B%0A\n-%09if ms.size == ms.capacity %7C%7C index == ms.capacity %7B%0A%09%09ms.expand()%0A%09%7D%0A%0A\n %09for\n@@ -1062,93 +1062,85 @@\n e)%0A%09\n-exist, index := ms.search(value)%0A%0A%09if exist %7B%0A%09%09ms.insert(value, index+1)%0A%09%7D else %7B%0A%09\n+if ms.size == ms.capacity %7B%0A%09%09ms.expand()%0A%09%7D%0A%0A%09_, index := ms.search(value)%0A%0A\n %09ms.\n@@ -1160,19 +1160,16 @@\n  index)%0A\n-%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-04-23_20-42-01",
+            "content": "@@ -1195,24 +1195,26 @@\n value, index\n++1\n )%0A%09%7D else %7B%0A\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-23_20-42-48",
+            "content": "@@ -589,19 +589,19 @@\n ms.data%5B\n-mid\n+low\n %5D %3C= val\n@@ -1203,10 +1203,8 @@\n ndex\n-+1\n )%0A%09%7D\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-23_20-44-25",
+            "content": "@@ -898,16 +898,20 @@\n  ms.size\n+ - 1\n ; i %3E in\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-23_20-46-27",
+            "content": "@@ -1245,102 +1245,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Contains(value int) bool %7B%0A%09exist, _ := ms.search(value)%0A%09return exist%0A%7D%0A%0A\n func\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-04-23_20-48-49",
+            "content": "@@ -2261,24 +2261,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2306,43 +2306,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(ms.Contains(value))%0A\n %09%09ca\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-04-23_20-49-42",
+            "content": "@@ -36,37 +36,8 @@\n mt%22%0A\n-%09%22internal/runtime/exithook%22%0A\n %09%22os\n@@ -1339,330 +1339,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) erase(index int) error %7B%0A%09for i := index; i %3C ms.size-1; i++ %7B%0A%09%09ms.data%5Bi%5D = ms.data%5Bi+1%5D%0A%09%7D%0A%0A%09ms.size--%0A%09return nil%0A%7D%0A%0Afunc (ms *multiset) Erase(value int) error %7B%0A%09exist, index := ms.search(value)%0A%0A%09if !exist %7B%0A%09%09return fmt.Errorf(%22value not found%5Cn%22)%0A%09%7D else %7B%0A%09%09ms.erase(index)%0A%09%7D%0A%0A%09return nil%0A%7D%0A%0A\n func\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-04-23_20-53-51",
+            "content": "@@ -32,16 +32,45 @@\n %0A%09%22fmt%22%0A\n+%09%22internal/runtime/exithook%22%0A\n %09%22os%22%0A%09%22\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-04-23_20-54-29",
+            "content": "@@ -2524,24 +2524,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2569,27 +2569,8 @@\n 1%5D)%0A\n-%09%09%09ms.Erase(value)%0A\n %09%09ca\n",
+            "lines": "167"
+        },
+        {
+            "label": "2026-04-23_20-55-14",
+            "content": "@@ -2569,14 +2569,8 @@\n %0A%09%09%09\n-ok := \n ms.E\n@@ -2585,55 +2585,8 @@\n ue)%0A\n-%09%09%09if ok != nil %7B%0A%09%09%09%09fmt.Print(ok.Error)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-04-23_20-56-01",
+            "content": "@@ -2621,16 +2621,22 @@\n Print(ok\n+.Error\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-04-23_20-56-15",
+            "content": "@@ -1661,226 +1661,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Count(value int) %7B%0A%09exist, index := ms.search(value)%0A%09if !exist %7B%0A%09%09fmt.Println(%22value not found%22)%0A%09%09return%0A%09%7D%0A%09count := 0%0A%09for i := index; i %3C ms.size && ms.data%5Bi%5D == value; i++ %7B%0A%09%09count++%0A%09%7D%0A%7D%0A%0A\n func\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-04-24_05-42-19",
+            "content": "@@ -1697,15 +1697,11 @@\n int)\n- int\n  %7B%0A\n+\n %09exi\n@@ -1788,11 +1788,8 @@\n turn\n- -1\n %0A%09%7D%0A\n@@ -1873,25 +1873,10 @@\n t++%0A\n+\n %09%7D\n-%0A%0A%09return count\n %0A%7D%0A%0A\n@@ -2952,24 +2952,27 @@\n %22count%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2997,38 +2997,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Print(ms.Count(value))%0A\n %09%09ca\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-24_05-43-29",
+            "content": "@@ -3020,26 +3020,24 @@\n %09%09%09fmt.Print\n-ln\n (ms.Count(va\n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-04-24_05-43-52",
+            "content": "@@ -1738,39 +1738,8 @@\n ue)%0A\n-%09fmt.Printf(%22index=%25d%22, index)%0A\n %09if \n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-04-24_05-44-37",
+            "content": "@@ -1857,20 +1857,25 @@\n ndex; i \n-%3E= 0\n+%3C ms.size\n  && ms.d\n@@ -1892,18 +1892,18 @@\n value; i\n---\n+++\n  %7B%0A%09%09cou\n",
+            "lines": "187"
+        },
+        {
+            "label": "2026-04-24_05-46-40",
+            "content": "@@ -1705,70 +1705,132 @@\n  %7B%0A%09\n-// fmt.Printf(%22index=%25d%22, index)%0A%09_, index := ms.search(value)\n+exist, index := ms.search(value)%0A%09fmt.Printf(%22index=%25d%22, index)%0A%09if !exist %7B%0A%09%09fmt.Println(%22value not found%22)%0A%09%09return -1%0A%09%7D\n %0A%09co\n",
+            "lines": "187"
+        },
+        {
+            "label": "2026-04-24_05-47-18",
+            "content": "@@ -1865,157 +1865,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Unique() int %7B%0A%09count := 0%0A%09for i := 1; i %3C ms.size; i++ %7B%0A%09%09if ms.data%5Bi%5D != ms.data%5Bi-1%5D %7B%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%0A%09return count%0A%7D%0A%0A\n func\n@@ -3029,36 +3029,8 @@\n e%22:%0A\n-%09%09%09fmt.Println(ms.Unique())%0A\n %09%09ca\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-24_05-56-20",
+            "content": "@@ -1900,41 +1900,8 @@\n t %7B%0A\n-%09if ms.size == 0 %7B%0A%09%09return 0%0A%09%7D%0A\n %09cou\n@@ -1906,17 +1906,17 @@\n ount := \n-1\n+0\n %0A%09for i \n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-04-24_05-57-27",
+            "content": "@@ -2047,54 +2047,8 @@\n %0A%7D%0A%0A\n-func (ms *multiset) Clear() %7B%0A%09ms.size = 0%0A%7D%0A%0A\n func\n@@ -3255,22 +3255,8 @@\n r%22:%0A\n-%09%09%09ms.Clear()%0A\n %09%09de\n",
+            "lines": "198"
+        },
+        {
+            "label": "2026-04-24_05-58-22",
+            "content": "@@ -533,41 +533,8 @@\n size\n-%0A%09fmt.Println(%22%25d %25d%22, low, high)\n %0A%0A%09f\n",
+            "lines": "203"
+        },
+        {
+            "label": "2026-04-24_06-00-25",
+            "content": "@@ -536,25 +536,26 @@\n e%0A%09fmt.Print\n-f\n+ln\n (%22%25d %25d%22, lo\n",
+            "lines": "204"
+        },
+        {
+            "label": "2026-04-24_06-00-40",
+            "content": "@@ -3332,19 +3332,16 @@\n ar%22:%0A%09%09%09\n-// \n ms.Clear\n@@ -3347,23 +3347,8 @@\n r()%0A\n-%09%09%09ms.size = 0%0A\n %09%09de\n",
+            "lines": "204"
+        },
+        {
+            "label": "2026-04-24_06-02-20",
+            "content": "@@ -548,18 +548,16 @@\n f(%22%25d %25d\n-%5Cn\n %22, low, \n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-24_06-02-35",
+            "content": "@@ -710,63 +710,8 @@\n  1%0A%0A\n-%09fmt.Printf(%22low=%25d, high=%25d, pos=%25d%22, low, high, pos)%0A\n %09if \n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-24_06-03-55",
+            "content": "@@ -768,23 +768,8 @@\n %0A%09if\n- ms.size %3E 0 &&\n  pos\n",
+            "lines": "206"
+        },
+        {
+            "label": "2026-04-24_06-04-54",
+            "content": "@@ -707,19 +707,16 @@\n w - 1%0A%0A%09\n-// \n fmt.Prin\n",
+            "lines": "206"
+        },
+        {
+            "label": "2026-04-24_06-05-04",
+            "content": "@@ -529,16 +529,50 @@\n  ms.size\n+%0A%09fmt.Printf(%22%25d %25d%5Cn%22, low, high)\n %0A%0A%09for l\n@@ -1899,31 +1899,16 @@\n = index;\n- ms.size %3E 0 &&\n  i %3E= 0 \n",
+            "lines": "206"
+        },
+        {
+            "label": "2026-04-24_06-06-15",
+            "content": "@@ -673,18 +673,91 @@\n w - 1%0A%0A%09\n-if\n+// fmt.Printf(%22low=%25d, high=%25d, pos=%25d%22, low, high, pos)%0A%09if ms.size %3E 0 &&\n  pos %3E= \n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-24_06-06-39",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype multiset struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *multiset {\n\tvar ms multiset\n\tms.data = make([]int, capacity)\n\tms.capacity = capacity\n\tms.size = 0\n\n\treturn &ms\n}\n\nfunc (ms *multiset) expand() {\n\tndata := make([]int, 2*ms.capacity)\n\n\tfor i := range ms.size {\n\t\tndata[i] = ms.data[i]\n\t}\n\n\tms.data = ndata\n\tms.capacity = 2 * ms.capacity\n}\n\nfunc (ms *multiset) search(value int) (bool, int) {\n\tlow, high := 0, ms.size\n\n\tfor low < high {\n\t\tmid := (low + high) / 2\n\n\t\tif ms.data[mid] <= value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid\n\t\t}\n\t}\n\n\tpos := low - 1\n\n\tif pos >= 0 && ms.data[pos] == value {\n\t\treturn true, pos\n\t}\n\n\treturn false, low\n}\n\nfunc (ms *multiset) insert(value, index int) error {\n\tif ms.size == ms.capacity || index == ms.capacity {\n\t\tms.expand()\n\t}\n\n\tfor i := ms.size; i > index; i-- {\n\t\tms.data[i] = ms.data[i-1]\n\t}\n\n\tms.data[index] = value\n\tms.size++\n\n\treturn nil\n}\n\nfunc (ms *multiset) Insert(value int) {\n\t// fmt.Printf(\"\\nsize:%d\\n capacity:%d\\n value:%d\\n\", ms.size, ms.capacity, value)\n\texist, index := ms.search(value)\n\n\tif exist {\n\t\tms.insert(value, index+1)\n\t} else {\n\t\tms.insert(value, index)\n\t}\n}\n\nfunc (ms *multiset) Contains(value int) bool {\n\texist, _ := ms.search(value)\n\treturn exist\n}\n\nfunc (ms *multiset) erase(index int) error {\n\tfor i := index; i < ms.size-1; i++ {\n\t\tms.data[i] = ms.data[i+1]\n\t}\n\n\tms.size--\n\treturn nil\n}\n\nfunc (ms *multiset) Erase(value int) error {\n\texist, index := ms.search(value)\n\n\tif !exist {\n\t\treturn fmt.Errorf(\"value not found\\n\")\n\t} else {\n\t\tms.erase(index)\n\t}\n\n\treturn nil\n}\n\nfunc (ms *multiset) Count(value int) int {\n\t// fmt.Printf(\"index=%d\", index)\n\t_, index := ms.search(value)\n\tcount := 0\n\tfor i := index; ms.size > 0 && i >= 0 && ms.data[i] == value; i-- {\n\t\tcount++\n\t}\n\n\treturn count\n}\n\nfunc (ms *multiset) Unique() int {\n\tif ms.size == 0 {\n\t\treturn 0\n\t}\n\tcount := 1\n\tfor i := 1; i < ms.size; i++ {\n\t\tif ms.data[i] != ms.data[i-1] {\n\t\t\tcount++\n\t\t}\n\t}\n\n\treturn count\n}\n\nfunc (ms *multiset) Clear() {\n\tms.size = 0\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc (ms *multiset) String() string {\n\treturn fmt.Sprintf(\"[%s]\", Join(ms.data[0:ms.size], \", \"))\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms)\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tok := ms.Erase(value)\n\t\t\tif ok != nil {\n\t\t\t\tfmt.Print(ok)\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Contains(value))\n\t\tcase \"count\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Count(value))\n\t\tcase \"unique\":\n\t\t\tfmt.Println(ms.Unique())\n\t\tcase \"clear\":\n\t\t\t// ms.Clear()\n\t\t\tms.size = 0\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "204"
         }
     ]
 }
