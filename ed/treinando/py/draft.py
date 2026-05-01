@@ -4,14 +4,13 @@ def minv(v: list[int], i: int) -> int:
     i_min_rest = minv(v, i+1)
     return i_min_rest if v[i_min_rest] < v[i] else i
 
-# nao entendi essa funcao, 4*5*6 = 44???
-def mult(v: list[int], i: int) -> int:
-    if i == len(v): return 1
-    return v[i] * sum(v, i+1)
+def mult(v: list[int]) -> int:
+    if len(v) == 0: return 1
+    return v[0] * mult(v[1:])
 
-def sum(v: list[int], i: int) -> int:
-    if i == len(v): return 0
-    return v[i] + sum(v, i+1)
+def sum(v: list[int]) -> int:
+    if len(v) == 0: return 0
+    return v[0] + sum(v[1:])
 
 def reverse(v: list[int], i: int, j:int) -> None:
     if i >= j: return
@@ -45,8 +44,8 @@ def main() -> None:
             case "tostr": print(vector)
             case "torev": torev(vector, 0, len(vector)-1); print(vector)
             case "reverse": reverse(vector, 0, len(vector)-1)
-            case "sum": print(sum(vector, 0))
-            case "mult": print(mult(vector, 0))
+            case "sum": print(sum(vector))
+            case "mult": print(mult(vector))
             case "min": print(minv(vector, 0))
 
         

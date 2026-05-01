@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2026-03-17_13-26-20",
-            "content": "def minv(v: list[int], i: int) -> int:\n    if len(v) == 0: return -1\n    elif len(v)-1 == i: return i\n    i_min_rest = minv(v, i+1)\n    return i_min_rest if v[i_min_rest] < v[i] else i\n\n# nao entendi essa funcao, 4*5*6 = 44???\ndef mult(v: list[int], i: int) -> int:\n    if i == len(v): return 1\n    return v[i] * sum(v, i+1)\n\ndef sum(v: list[int], i: int) -> int:\n    if i == len(v): return 0\n    return v[i] + sum(v, i+1)\n\ndef reverse(v: list[int], i: int, j:int) -> None:\n    if i >= j: return\n    aux: int = v[i]\n    v[i] = v[j]\n    v[j] = aux\n    torev(v, i+1, j-1)\n\ndef torev(v: list[int], i: int, j: int) -> None:\n    if i >= j: return\n    aux: int = v[i]\n    v[i] = v[j]\n    v[j] = aux\n    torev(v, i+1, j-1)\n\n# torev returning a new vector\n# def torev2(v: list[int], i: int) -> list[int]:\n#     if i == len(v): return []\n#     last = v[len(v)-1-i]\n#     return [last] + torev2(v, i+1)\n\ndef main() -> None:\n    vector: list[int] = []\n    while True:    \n        line: str = input()\n        print(\"$\"+line)\n        args: list[str] = line.split(maxsplit=1)\n        match args[0]:\n            case \"end\": break\n            case \"read\": vector = list(map(int, args[1].split() if len(args)>1 else []))\n            case \"tostr\": print(vector)\n            case \"torev\": torev(vector, 0, len(vector)-1); print(vector)\n            case \"reverse\": reverse(vector, 0, len(vector)-1)\n            case \"sum\": print(sum(vector, 0))\n            case \"mult\": print(mult(vector, 0))\n            case \"min\": print(minv(vector, 0))\n\n        \n\nif __name__ == \"__main__\":\n    main()",
+            "content": "@@ -1561,9 +1561,8 @@\n   main()\n-%0A\n",
             "lines": "55"
+        },
+        {
+            "label": "2026-05-01_10-43-48",
+            "content": "@@ -179,16 +179,57 @@\n else i%0A%0A\n+# nao entendi essa funcao, 4*5*6 = 44???%0A\n def mult\n@@ -241,16 +241,24 @@\n ist%5Bint%5D\n+, i: int\n ) -%3E int\n@@ -261,36 +261,36 @@\n  int:%0A    if\n+ i ==\n  len(v)\n- == 0\n : return 1%0A \n@@ -310,18 +310,18 @@\n %5D * \n-mult(v%5B1:%5D\n+sum(v, i+1\n )%0A%0Ad\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-01_10-55-09",
+            "content": "@@ -1411,16 +1411,19 @@\n t(vector\n+, 0\n ))%0A     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-01_10-56-38",
+            "content": "@@ -252,17 +252,17 @@\n eturn v%5B\n-0\n+i\n %5D * mult\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-01_10-57-49",
+            "content": "@@ -282,32 +282,40 @@\n sum(v: list%5Bint%5D\n+, i: int\n ) -%3E int:%0A    if\n@@ -310,36 +310,36 @@\n  int:%0A    if\n+ i ==\n  len(v)\n- == 0\n : return 0%0A \n@@ -350,17 +350,17 @@\n eturn v%5B\n-0\n+i\n %5D + sum(\n@@ -360,20 +360,21 @@\n  + sum(v\n-%5B1:%5D\n+, i+1\n )%0A%0Adef r\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-01_10-59-49",
+            "content": "@@ -1350,24 +1350,27 @@\n t(sum(vector\n+, 0\n ))%0A         \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-01_11-00-02",
+            "content": "def minv(v: list[int], i: int) -> int:\n    if len(v) == 0: return -1\n    elif len(v)-1 == i: return i\n    i_min_rest = minv(v, i+1)\n    return i_min_rest if v[i_min_rest] < v[i] else i\n\ndef mult(v: list[int]) -> int:\n    if len(v) == 0: return 1\n    return v[0] * mult(v[1:])\n\ndef sum(v: list[int]) -> int:\n    if len(v) == 0: return 0\n    return v[0] + sum(v[1:])\n\ndef reverse(v: list[int], i: int, j:int) -> None:\n    if i >= j: return\n    aux: int = v[i]\n    v[i] = v[j]\n    v[j] = aux\n    torev(v, i+1, j-1)\n\ndef torev(v: list[int], i: int, j: int) -> None:\n    if i >= j: return\n    aux: int = v[i]\n    v[i] = v[j]\n    v[j] = aux\n    torev(v, i+1, j-1)\n\n# torev returning a new vector\n# def torev2(v: list[int], i: int) -> list[int]:\n#     if i == len(v): return []\n#     last = v[len(v)-1-i]\n#     return [last] + torev2(v, i+1)\n\ndef main() -> None:\n    vector: list[int] = []\n    while True:    \n        line: str = input()\n        print(\"$\"+line)\n        args: list[str] = line.split(maxsplit=1)\n        match args[0]:\n            case \"end\": break\n            case \"read\": vector = list(map(int, args[1].split() if len(args)>1 else []))\n            case \"tostr\": print(vector)\n            case \"torev\": torev(vector, 0, len(vector)-1); print(vector)\n            case \"reverse\": reverse(vector, 0, len(vector)-1)\n            case \"sum\": print(sum(vector))\n            case \"mult\": print(mult(vector))\n            case \"min\": print(minv(vector, 0))\n\n        \n\nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "54"
         }
     ]
 }
