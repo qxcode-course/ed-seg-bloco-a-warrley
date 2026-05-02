@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-01_22-46-24",
+            "content": "@@ -43,124 +43,4 @@\n d!%22%0A\n-%0A%0Aprime :: Integer -%3E Interger %0Aprime n %0A  %7C n %3C= 1 = Interger%0A  %7C otherwise = length %5Bx %7C x %3C- %5B2..n%5D, n %60mod%60 x == 0%5D%0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2026-05-01_22-50-16",
+            "content": "@@ -61,24 +61,25 @@\n eger -%3E Inte\n+r\n ger %0Aprime n\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-05-01_22-50-26",
+            "content": "@@ -41,16 +41,45 @@\n rld!%22%0A%0A%0A\n+prime :: Integer -%3E Integer %0A\n prime n \n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-05-01_22-50-45",
+            "content": "@@ -44,35 +44,8 @@\n !%22%0A%0A\n-prime :: Integer -%3E Integer\n %0Apri\n@@ -63,17 +63,24 @@\n  %3C= 1 = \n-0\n+Interger\n %0A  %7C oth\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-01_22-51-47",
+            "content": "@@ -56,15 +56,23 @@\n  Int\n+eger\n  -%3E Int\n+eger\n %0Apri\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-01_22-52-08",
+            "content": "@@ -18,81 +18,32 @@\n n = \n-do %0A  input %3C- getLine %0A  let n = read input :: Int %0A  putStrLn (prime n)\n+putStrLn %22Hello, World!%22\n %0A%0Apr\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-01_22-54-00",
+            "content": "@@ -82,14 +82,8 @@\n rLn \n-(show \n (pri\n@@ -87,17 +87,16 @@\n prime n)\n-)\n %0A%0Aprime \n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-01_22-54-50",
+            "content": "@@ -181,13 +181,9 @@\n %5B2..\n-(n-1)\n+n\n %5D, n\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-01_22-55-14",
+            "content": "@@ -74,12 +74,21 @@\n %0A  p\n-rint\n+utStrLn (show\n  (pr\n@@ -93,16 +93,17 @@\n prime n)\n+)\n %0A%0Aprime \n@@ -116,12 +116,11 @@\n  -%3E \n-Bool\n+Int\n %0Apri\n@@ -142,13 +142,9 @@\n 1 = \n-False\n+0\n %0A  %7C\n@@ -200,14 +200,9 @@\n  x == 0%5D\n- == 0\n %0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-01_22-56-23",
+            "content": "@@ -74,52 +74,21 @@\n %0A  p\n-utStrLn (if prime n then %22true%22 else %22false%22\n+rint (prime n\n )%0A%0Ap\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-01_22-57-34",
+            "content": "main :: IO ()\nmain = do \n  input <- getLine \n  let n = read input :: Int \n  putStrLn (if prime n then \"true\" else \"false\")\n\nprime :: Int -> Bool\nprime n \n  | n <= 1 = False\n  | otherwise = length [x | x <- [2..(n-1)], n `mod` x == 0] == 0\n",
+            "lines": "10"
+        }
+    ]
+}

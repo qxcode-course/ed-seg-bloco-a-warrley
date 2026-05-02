@@ -9,3 +9,4 @@
 2026-04-25 19:04:54, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:45
 2026-04-25 19:05:00, MOVE, v:1, k:ed@magicsearch, mode:BACK
 2026-04-25 19:08:33, SELF, v:1, k:ed@magicsearch, self:1, rate:100
+2026-04-25 20:27:00, MOVE, v:1, k:ed@iterador, mode:DOWN

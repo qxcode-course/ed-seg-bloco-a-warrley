@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@vector
+- ed@rec
 flags:
   inbox: all
   panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
-lang: go
-selected: ed@magicsearch
-selected_index: 10
+lang: hs
+selected: ed@eh_primo
+selected_index: 11

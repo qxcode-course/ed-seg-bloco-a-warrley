@@ -6,9 +6,9 @@ Seja um número inteiro, retorne se ele é primo ou não.
 
 <!-- links .cache/drafts -->
 - cpp
-  - [main.cpp](../../.tko/cache/ed/base/eh_primo/.cache/drafts/cpp/main.cpp)
+  - [main.cpp](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/eh_primo/.cache/drafts/cpp/main.cpp)
 - go
-  - [main.go](../../.tko/cache/ed/base/eh_primo/.cache/drafts/go/main.go)
+  - [main.go](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/eh_primo/.cache/drafts/go/main.go)
 <!-- links -->
 
 ## Testes
