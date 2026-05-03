@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
+- ed@list
 flags:
   inbox: all
   panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
-lang: hs
-selected: ed@eh_primo
-selected_index: 11
+lang: go
+selected: ed@lista_d1
+selected_index: 7
