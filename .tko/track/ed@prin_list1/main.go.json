@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-03_21-30-21",
+            "content": "@@ -300,20 +300,20 @@\n  n.root.\n-prev\n+next\n %0A%09%7D%0A%09ret\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-03_21-35-21",
+            "content": "@@ -648,20 +648,16 @@\n (%22%5B%22)%0A%0A%09\n-for \n curr := \n@@ -663,79 +663,35 @@\n  cl.\n+F\n ro\n-ot.next; curr != curr.root; curr = curr.next %7B%0A%09%09if curr.hassword\n+nt()%0A%09for curr != nil\n  %7B%0A\n-%09\n %09%09sb\n@@ -718,18 +718,16 @@\n intf(%22%25d\n-%3E \n %22, curr.\n@@ -737,66 +737,57 @@\n a))%0A\n+%0A\n %09%09\n-%7D else %7B%0A%09%09%09sb.WriteString(fmt.Sprintf(%22%25d %22, curr.data)\n+if curr.Next() != nil %7B%0A%09%09%09sb.WriteString(%22, %22\n )%0A%09%09\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-03_21-40-08",
+            "content": "@@ -1612,16 +1612,42 @@\n chosen)%0A\n+%09fmt.Println(qtd, chosen)%0A\n %09l := Ne\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-05-03_21-41-48",
+            "content": "@@ -1808,35 +1808,8 @@\n n(l)\n-%0A%0A%09%09killer.hassword = false\n %0A%09%09l\n@@ -1831,17 +1831,16 @@\n Next())%0A\n-%0A\n %09%09killer\n@@ -1860,33 +1860,8 @@\n t()%0A\n-%09%09killer.hassword = true%0A\n %09%7D%0A%0A\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-05-03_21-43-25",
+            "content": "@@ -847,16 +847,37 @@\n a))%0A%09%09%7D%0A\n+%09%09curr = curr.Next()%0A\n %09%7D%0A%09sb.W\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-05-03_21-44-21",
+            "content": "@@ -643,17 +643,16 @@\n tring(%22%5B\n- \n %22)%0A%0A%09for\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-03_21-45-00",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tdata     int\n\thassword bool\n\tprev     *Node\n\tnext     *Node\n\troot     *Node\n}\n\nfunc (n *Node) Next() *Node {\n\tif n.next == n.root {\n\t\treturn n.root.next\n\t}\n\treturn n.next\n}\n\nfunc (n *Node) Prev() *Node {\n\tif n.prev == n.root {\n\t\treturn n.root.prev\n\t}\n\treturn n.prev\n}\n\ntype CList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewCList() *CList {\n\troot := &Node{}\n\troot.next = root\n\troot.prev = root\n\troot.root = root\n\n\tcl := &CList{root: root, size: 0}\n\treturn cl\n}\n\nfunc (cl *CList) Size() int {\n\treturn cl.size\n}\n\nfunc (cl *CList) String() string {\n\tvar sb strings.Builder\n\tsb.WriteString(\"[ \")\n\n\tfor curr := cl.root.next; curr != curr.root; curr = curr.next {\n\t\tif curr.hassword {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d> \", curr.data))\n\t\t} else {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d \", curr.data))\n\t\t}\n\t}\n\tsb.WriteString(\"]\")\n\treturn sb.String()\n}\n\nfunc (cl *CList) Front() *Node {\n\treturn cl.root.Next()\n}\n\nfunc (cl *CList) Back() *Node {\n\treturn cl.root.Prev()\n}\n\nfunc (cl *CList) Insert(node *Node, value int) {\n\tprev := node.prev\n\n\tn := &Node{\n\t\tdata:     value,\n\t\thassword: false,\n\t\tprev:     prev,\n\t\tnext:     node,\n\t\troot:     cl.root,\n\t}\n\n\tprev.next = n\n\tnode.prev = n\n\n\tcl.size++\n}\n\nfunc (cl *CList) PushBack(value int) {\n\tcl.Insert(cl.root, value)\n}\n\nfunc (cl *CList) PushFront(value int) {\n\tcl.Insert(cl.root.next, value)\n}\n\nfunc (cl *CList) Remove(node *Node) *Node {\n\tnext := node.Next()\n\n\tnode.prev.next = node.next\n\tnode.next.prev = node.prev\n\n\tcl.size--\n\treturn next\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tl := NewCList()\n\tvar killer *Node\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t\tif i == chosen {\n\t\t\tl.Back().hassword = true\n\t\t\tkiller = l.Back()\n\t\t}\n\t}\n\n\tfor l.Size() > 1 {\n\t\tfmt.Println(l)\n\n\t\tkiller.hassword = false\n\t\tl.Remove(killer.Next())\n\n\t\tkiller = killer.Next()\n\t\tkiller.hassword = true\n\t}\n\n\tfmt.Println(l)\n}\n",
+            "lines": "131"
+        }
+    ]
+}
