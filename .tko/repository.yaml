@@ -6,28 +6,27 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: eval1
   target: https://github.com/senapk/eval_26_ed_1
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
-expanded: []
+expanded:
+- eval1@eval1
+- sandbox@sandbox
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@list
-selected_index: 6
+selected: eval1@casais
+selected_index: 15
