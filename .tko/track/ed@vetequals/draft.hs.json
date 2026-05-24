@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_14-34-04",
+            "content": "@@ -1,470 +1,48 @@\n-equals :: %5BInt%5D -%3E %5BInt%5D -%3E Bool%0Aequals %5B%5D %5B%5D = True%0Aequals %5B%5D y = False%0Aequals x %5B%5D = False%0Aequals (x:xs) (y:ys)%0A  %7C x == y = equals xs ys%0A  %7C otherwise = False%0A-- equals (x:xs) (y:ys) = (x == y)%0A %0Aparse :: String -%3E %5BInt%5D%0Aparse s = map read (words (filter isValid s))%0A  where %0A    isValid c = c /= '%5B' && c /= '%5D'%0A%0Amain :: IO ()%0Amain = do%0A  a %3C- getLine %0A  b %3C- getLine%0A%0A  let v1 = parse a%0A  let v2 = parse b%0A%0A  if equals v1 v2 then putStrLn %22iguais%22 else %22diferente\n+%0A%0Amain :: IO ()%0Amain = putStrLn %22Hello, World!\n %22%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-05-24_14-50-52",
+            "content": "@@ -461,11 +461,10 @@\n iferente\n-s\n %22%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-24_14-52-18",
+            "content": "@@ -451,25 +451,16 @@\n s%22 else \n-putStrLn \n %22diferen\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-24_14-52-29",
+            "content": "equals :: [Int] -> [Int] -> Bool\nequals [] [] = True\nequals [] y = False\nequals x [] = False\nequals (x:xs) (y:ys)\n  | x == y = equals xs ys\n  | otherwise = False\n-- equals (x:xs) (y:ys) = (x == y)\n \nparse :: String -> [Int]\nparse s = map read (words (filter isValid s))\n  where \n    isValid c = c /= '[' && c /= ']'\n\nmain :: IO ()\nmain = do\n  a <- getLine \n  b <- getLine\n\n  let v1 = parse a\n  let v2 = parse b\n\n  if equals v1 v2 then putStrLn \"iguais\" else putStrLn \"diferentes\"\n",
+            "lines": "23"
+        }
+    ]
+}
