@@ -1,0 +1,5 @@
+2026-05-18 16:34:02, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-18 16:34:02, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100, size:57
+2026-05-18 16:35:10, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-18 16:35:17, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-18 16:35:18, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100

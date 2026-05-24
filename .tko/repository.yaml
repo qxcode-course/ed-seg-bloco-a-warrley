@@ -19,14 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- eval1@eval1
-- sandbox@sandbox
+- ed@rec
 flags:
   inbox: all
-  panel: skills
+  panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
-lang: go
-selected: eval1@casais
-selected_index: 15
+lang: hs
+selected: ed@eh_primo
+selected_index: 11
