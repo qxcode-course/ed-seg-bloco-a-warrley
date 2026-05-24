@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_14-55-01",
+            "content": "@@ -1,16 +1,30 @@\n+main :: IO ()%0A\n prime :: Int -%3E \n@@ -87,24 +87,8 @@\n  2%0A%0A\n--- n_prime :: %0A%0A\n main\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-05-24_14-55-07",
+            "content": "@@ -69,16 +69,19 @@\n %5D == 2%0A%0A\n+-- \n n_prime \n@@ -87,153 +87,52 @@\n  :: \n-Int -%3E Int%0An_prime n = last(take n %5Bx %7C x %3C- %5B2..%5D, prime x%5D)%0A%0Amain :: IO ()%0Amain = do %0A  input %3C- getLine%0A  let n = read(input)%0A  print(n_prime(n))\n+%0A%0Amain :: IO ()%0Amain = putStrLn %22Hello, World!%22\n %0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-24_14-59-28",
+            "content": "prime :: Int -> Bool\nprime n = length [x | x <- [1..n], mod n x == 0] == 2\n\nn_prime :: Int -> Int\nn_prime n = last(take n [x | x <- [2..], prime x])\n\nmain :: IO ()\nmain = do \n  input <- getLine\n  let n = read(input)\n  print(n_prime(n))\n",
+            "lines": "11"
+        }
+    ]
+}
