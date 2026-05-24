@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_15-04-17",
+            "content": "@@ -1,249 +1,46 @@\n-prime :: Int -%3E Bool%0Aprime n = length %5Bx %7C x %3C- %5B1..n%5D, mod n x == 0%5D == 2%0A%0Aprime_list :: Int -%3E %5BInt%5D%0Aprime_list n = take n %5Bx %7C x %3C- %5B2..%5D, prime x%5D%0A%0Amain :: IO ()%0Amain = do%0A  input %3C- getLine%0A  let n = read(input)%0A  print(prime_list read(input))\n+main :: IO ()%0Amain = putStrLn %22Hello, World!%22\n %0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2026-05-24_15-07-46",
+            "content": "@@ -193,11 +193,8 @@\n ne%0A \n- --\n  let\n@@ -229,17 +229,16 @@\n me_list \n-(\n read(inp\n@@ -241,10 +241,9 @@\n (input))\n-)\n %0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-24_15-07-59",
+            "content": "@@ -149,154 +149,8 @@\n x%5D%0A%0A\n-formatList :: %5BInt%5D -%3E String%0Aformat xs = %22%5B%22 ++ go xs ++ %22%5D%22%0A  where%0A    go %5B%5D = %22%22%0A    go %5Bx%5D = show x%0A    go (x:xs) = show x ++ %22, %22 ++ go xs%0A%0A\n main\n@@ -194,29 +194,38 @@\n e%0A  \n-putStrLn (formatList \n+-- let n = read(input)%0A  print\n (pri\n@@ -237,17 +237,17 @@\n st (read\n- \n+(\n input)))\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-24_15-16-12",
+            "content": "@@ -181,20 +181,16 @@\n g%0Aformat\n-List\n  xs = %22%5B\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-24_15-16-38",
+            "content": "prime :: Int -> Bool\nprime n = length [x | x <- [1..n], mod n x == 0] == 2\n\nprime_list :: Int -> [Int]\nprime_list n = take n [x | x <- [2..], prime x]\n\nformatList :: [Int] -> String\nformatList xs = \"[\" ++ go xs ++ \"]\"\n  where\n    go [] = \"\"\n    go [x] = show x\n    go (x:xs) = show x ++ \", \" ++ go xs\n\nmain :: IO ()\nmain = do\n  input <- getLine\n  putStrLn (formatList (prime_list (read input)))\n",
+            "lines": "17"
+        }
+    ]
+}
