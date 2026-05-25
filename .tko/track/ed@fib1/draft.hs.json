@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_15-19-46",
+            "content": "@@ -1,236 +1,46 @@\n-fibRabbits :: Int -%3E Int -%3E Int%0AfibRabbits 1 _ = 1%0AfibRabbits 2 _ = 1%0AfibRabbits n k = fibRabbits(n-1) k + k * fibRabbits(n-2) k %0A%0Amain :: IO ()%0Amain = do %0A  line %3C- getLine%0A  let %5Bn, k%5D = map read (words line)%0A  print (fibRabbits n k)\n+main :: IO ()%0Amain = putStrLn %22Hello, World!%22\n %0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2026-05-24_15-30-02",
+            "content": "fibRabbits :: Int -> Int -> Int\nfibRabbits 1 _ = 1\nfibRabbits 2 _ = 1\nfibRabbits n k = fibRabbits(n-1) k + k * fibRabbits(n-2) k \n\nmain :: IO ()\nmain = do \n  line <- getLine\n  let [n, k] = map read (words line)\n  print (fibRabbits n k)\n",
+            "lines": "10"
+        }
+    ]
+}

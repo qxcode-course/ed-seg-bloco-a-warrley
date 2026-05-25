@@ -19,6 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@bfs
 - ed@rec
 flags:
   inbox: all
@@ -27,5 +28,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: hs
-selected: ed@priminhos
-selected_index: 14
+selected: ed@rotten
+selected_index: 35

@@ -109,3 +109,22 @@
 2026-05-24 15:07:59, MOVE, v:1, k:ed@priminhos, mode:EDIT
 2026-05-24 15:16:12, EXEC, v:1, k:ed@priminhos, mode:FULL, size:17, fail:COMP
 2026-05-24 15:16:38, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:100, size:17
+2026-05-24 15:17:10, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-24 15:16:37, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-24 15:16:37, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-24 15:16:38, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-24 15:16:38, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-24 15:16:38, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-24 15:17:58, MOVE, v:1, k:ed@quadrado, mode:DOWN
+2026-05-24 15:19:41, MOVE, v:1, k:ed@fib1, mode:DOWN
+2026-05-24 15:19:42, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-05-24 15:19:46, EXEC, v:1, k:ed@fib1, mode:FULL, rate:0, size:2
+2026-05-24 15:19:41, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-24 15:19:41, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-24 15:19:44, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-24 15:19:44, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-24 15:19:44, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-24 15:30:02, EXEC, v:1, k:ed@fib1, mode:FULL, rate:100, size:10
+2026-05-24 15:30:11, MOVE, v:1, k:ed@fib1, mode:BACK
+2026-05-24 15:30:16, SELF, v:1, k:ed@fib1, self:1, rate:100
+2026-05-24 15:38:55, MOVE, v:1, k:ed@fib1, mode:PICK
