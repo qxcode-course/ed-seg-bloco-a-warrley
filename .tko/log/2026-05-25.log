@@ -1,1 +1,8 @@
 2026-05-25 16:35:54, MOVE, v:1, k:ed@escapeSpread, mode:DOWN
+2026-05-25 16:37:34, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-05-25 16:37:35, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:100, size:79
+2026-05-25 16:38:27, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-05-25 16:38:32, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-05-25 16:51:30, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-05-25 16:51:31, MOVE, v:1, k:ed@escapeSpread, mode:BACK
+2026-05-25 16:51:33, MOVE, v:1, k:ed@caminho, mode:PICK
