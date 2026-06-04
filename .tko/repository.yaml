@@ -22,10 +22,10 @@ expanded:
 - ed@linear
 flags:
   inbox: all
-  panel: help
+  panel: graph
   show_panel: 'false'
-  task_graph_mode: executions
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@fila_enc
-selected_index: 8
+selected: ed@pilha
+selected_index: 9
