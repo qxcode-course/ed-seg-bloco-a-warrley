@@ -60,3 +60,4 @@
 2026-05-28 19:36:14, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:178
 2026-05-28 19:36:33, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:178
 2026-05-28 19:38:10, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:178
+2026-05-28 19:38:58, SELF, v:1, k:ed@bufferring, self:1, rate:100
