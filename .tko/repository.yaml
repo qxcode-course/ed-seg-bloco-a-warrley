@@ -19,19 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
-- ed@list
-- ed@backtrack
-- ed@vector
-- ed@linear
-- eval1@eval1
-- ed@map_set
+- ed@rec
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'false'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@inverter
-selected_index: 50
+selected: ed@queimada
+selected_index: 9

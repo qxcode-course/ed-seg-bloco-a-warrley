@@ -1,0 +1,26 @@
+2026-06-15 11:20:57, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-06-15 11:20:58, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-06-15 11:20:59, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-06-15 11:21:00, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-06-15 11:21:00, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:100
+2026-06-15 11:21:01, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-06-15 11:21:04, SELF, v:1, k:eval1@casais, self:1, rate:100
+2026-06-15 11:21:07, SELF, v:1, k:eval1@triangulo, self:1, rate:100
+2026-06-15 11:21:09, SELF, v:1, k:eval1@queimada, self:1, rate:100
+2026-06-15 11:21:13, SELF, v:1, k:eval1@apagando, self:1, rate:100
+2026-06-15 11:21:16, SELF, v:1, k:eval1@baruel, self:1
+2026-06-15 11:23:14, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-06-15 11:23:14, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-06-15 11:23:22, EXEC, v:1, k:ed@queimada, mode:FULL, rate:16, size:41
+2026-06-15 11:20:58, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-06-15 11:21:00, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-06-15 11:23:14, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:23:14, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:23:21, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:23:21, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:23:22, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:28:30, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:50
+2026-06-15 11:28:29, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:28:29, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:28:30, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-15 11:34:38, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
